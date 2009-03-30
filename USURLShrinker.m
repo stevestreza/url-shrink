@@ -9,22 +9,46 @@
 #import "USURLShrinker.h"
 
 #import "TCDownload.h"
+#import "USShrinkController.h"
 
 @implementation USURLShrinker
+
++(void)load {
+	[self registerShrinker];
+}
+
++(void)registerShrinker{
+	NSLog(@"Attempting to register %@",[self name]);
+	[[USShrinkController sharedShrinkController] registerShrinkClass:self];	
+}
+
++(NSString *)name{
+	return nil;
+}
 
 -(void)shrinkURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action{
+	_target = target;
+	_action = action;
 	
-	NSString *newURLString = [NSString stringWithFormat:@"http://is.gd/api.php?longurl=%@",[url absoluteString]];
-	NSURL *newURL = [NSURL URLWithString:newURLString];
+	[NSThread detachNewThreadSelector:@selector(_startShrink:) toTarget:self withObject:url];
+}
 
-	NSData *data = [TCDownload loadResourceDataForURL:newURL];
-	NSString *tinyURL = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+-(void)_startShrink:(NSURL *)url{
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
-	NSLog(@"tiny! %@",tinyURL);
+	[self performShrinkOnURL:url];
 	
-	[target performSelector:action withObject:tinyURL];
+	[pool release];
+}
+
+-(void)performShrinkOnURL:(NSURL *)url{
+	[self doneShrinking:nil];
+}
+
+-(void)doneShrinking:(NSURL *)url{
+	[_target performSelectorOnMainThread:_action withObject:url waitUntilDone:NO];
 }
 
 @end

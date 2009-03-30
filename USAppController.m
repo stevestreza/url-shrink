@@ -7,6 +7,8 @@
 //
 
 #import "USAppController.h"
+#import "USShrinkController.h"
+
 OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
 
 OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData){
@@ -19,8 +21,6 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 @implementation USAppController
 
 -(void)awakeFromNib{
-	shrinker = [[USURLShrinker alloc] init];
-	
 	EventHotKeyRef myHotKeyRef;
     EventHotKeyID myHotKeyID;
     EventTypeSpec eventType;
@@ -57,6 +57,7 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 	if(url){
 		NSLog(@"Shrinking URL %@",url);
 		
+		USURLShrinker *shrinker = [[USShrinkController sharedShrinkController] shrinker];
 		[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
 	}
 }
