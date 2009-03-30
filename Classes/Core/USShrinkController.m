@@ -29,6 +29,10 @@ objc_singleton(USShrinkController, sharedShrinkController);
 	[shrinkers setObject:aClass forKey:className];
 }
 
+-(NSArray *)allShrinkers{
+	return [[[shrinkers allValues] copy] autorelease];
+}
+
 -(USURLShrinker *)shrinker{
 	Class shrinkerClass = NULL;
 	

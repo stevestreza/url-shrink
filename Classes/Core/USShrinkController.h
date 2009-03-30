@@ -9,8 +9,6 @@
 #import "USIncludes.h"
 #import "USURLShrinker.h"
 
-#define kUSShrinkChoiceDefaultsKey @"Shrinker"
-
 @interface USShrinkController : NSObject {
 	USURLShrinker *shrinker;
 	
@@ -18,5 +16,5 @@
 }
 
 +(USShrinkController *)sharedShrinkController;
-
+-(NSArray *)allShrinkers;
 @end

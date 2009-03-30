@@ -8,6 +8,7 @@
 
 #import "USAppController.h"
 #import "USShrinkController.h"
+#import "USSettingsController.h"
 
 OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
 
@@ -34,6 +35,9 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
     myHotKeyID.id=1;
 	
 	RegisterEventHotKey(7, optionKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
+	
+	USSettingsController *settings = [[USSettingsController alloc] init];
+	[settings showWindow:self];
 }
 
 -(void)shrinkURL:(EventRef)ev{

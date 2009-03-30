@@ -26,6 +26,10 @@
 	return nil;
 }
 
+-(NSString *)name{
+	return [[self class] name];
+}
+
 -(void)shrinkURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action{

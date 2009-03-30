@@ -8,3 +8,5 @@
 - (unsigned)retainCount{return UINT_MAX;} \
 - (void)release{} \
 - (id)autorelease{return self;}
+
+#define kUSShrinkChoiceDefaultsKey @"Shrinker"
