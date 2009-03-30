@@ -7,8 +7,6 @@
 //
 
 #import "USAppController.h"
-#import <Carbon/Carbon.h>
-
 OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
 
 OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData){
@@ -21,6 +19,8 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 @implementation USAppController
 
 -(void)awakeFromNib{
+	shrinker = [[USURLShrinker alloc] init];
+	
 	EventHotKeyRef myHotKeyRef;
     EventHotKeyID myHotKeyID;
     EventTypeSpec eventType;
@@ -28,16 +28,47 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 	eventType.eventClass=kEventClassKeyboard;
     eventType.eventKind=kEventHotKeyPressed;
 	
-	InstallApplicationEventHandler(&handleShrinkHotKey,1,&eventType,NULL,NULL);
+	InstallApplicationEventHandler(&handleShrinkHotKey,1,&eventType,self,NULL);
 	
 	myHotKeyID.signature='mhk1';
     myHotKeyID.id=1;
 	
-	RegisterEventHotKey(7, optionKey, myHotKeyID, GetApplicationEventTarget(), self, &myHotKeyRef);
+	RegisterEventHotKey(7, optionKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
 }
 
 -(void)shrinkURL:(EventRef)ev{
+	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
+	NSArray *types = [pboard types];
+	NSLog(@"types! %@",types);
 	
+	NSString *urlString = nil;
+	NSURL *url = nil;
+	
+	if([types containsObject:NSURLPboardType]){
+		urlString = [pboard stringForType:NSURLPboardType];
+	}else if([types containsObject:NSStringPboardType]){
+		urlString = [pboard stringForType:NSStringPboardType];
+	}
+	
+	if(urlString && !url){
+		url = [NSURL URLWithString:urlString];
+	}
+	
+	if(url){
+		NSLog(@"Shrinking URL %@",url);
+		
+		[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
+	}
+}
+
+-(void)URLShrunk:(NSURL *)newURL{
+	if([newURL isKindOfClass:[NSString class]]){
+		newURL = [NSURL URLWithString:(NSString *)newURL];
+	}
+	NSLog(@"whee! %@",newURL);
+	
+	[[NSPasteboard generalPasteboard] declareTypes:[NSArray arrayWithObject:NSURLPboardType] owner:self];
+	[newURL writeToPasteboard:[NSPasteboard generalPasteboard]];
 }
 
 @end
