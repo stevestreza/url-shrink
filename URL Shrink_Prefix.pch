@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'URL Shrink' target in the 'URL Shrink' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
