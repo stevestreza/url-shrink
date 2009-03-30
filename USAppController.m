@@ -3,7 +3,7 @@
 //  URL Shrink
 //
 //  Created by Steve on 3/30/09.
-//  Copyright 2009 Ambrosia Software. All rights reserved.
+//  Copyright 2009 Steve Streza. All rights reserved.
 //
 
 #import "USAppController.h"
@@ -48,6 +48,17 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 		urlString = [pboard stringForType:NSURLPboardType];
 	}else if([types containsObject:NSStringPboardType]){
 		urlString = [pboard stringForType:NSStringPboardType];
+	}
+	
+	//sanitize the URL string before handing it off to NSURL
+	//from Dan Wood, http://stackoverflow.com/questions/192944/whats-the-best-way-to-validate-a-user-entered-url-in-a-cocoa-application
+	
+	if(urlString){
+		urlString = NSMakeCollectable(CFURLCreateStringByAddingPercentEscapes(NULL,
+																  (CFStringRef)urlString,
+																  (CFStringRef)@"%+#",	// Characters to leave unescaped
+																  NULL,
+																  kCFStringEncodingUTF8));
 	}
 	
 	if(urlString && !url){

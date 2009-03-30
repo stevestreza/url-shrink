@@ -3,7 +3,7 @@
 //  URL Shrink
 //
 //  Created by Steve on 3/30/09.
-//  Copyright 2009 Ambrosia Software. All rights reserved.
+//  Copyright 2009 Steve Streza. All rights reserved.
 //
 
 #import "USShrinkController.h"
@@ -35,6 +35,7 @@ objc_singleton(USShrinkController, sharedShrinkController);
 	//get the user's preferred class
 	NSString *defaultsValue = [[NSUserDefaults standardUserDefaults] stringForKey:kUSShrinkChoiceDefaultsKey];
 	if(defaultsValue && [shrinkers objectForKey:defaultsValue]){
+		NSLog(@"Found user default: %@",defaultsValue);
 		shrinkerClass = [shrinkers objectForKey:defaultsValue];
 	}
 	
