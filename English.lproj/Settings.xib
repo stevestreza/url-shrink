@@ -49,13 +49,6 @@
 					<int key="NSvFlags">256</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSCustomView" id="274014185">
-							<reference key="NSNextResponder" ref="143712367"/>
-							<int key="NSvFlags">258</int>
-							<string key="NSFrame">{{80, 57}, {220, 22}}</string>
-							<reference key="NSSuperview" ref="143712367"/>
-							<string key="NSClassName">SRRecorderControl</string>
-						</object>
 						<object class="NSBox" id="327987454">
 							<reference key="NSNextResponder" ref="143712367"/>
 							<int key="NSvFlags">12</int>
@@ -182,14 +175,9 @@
 										<bytes key="NSWhite">MC42NjY2NjY2OQA</bytes>
 									</object>
 								</object>
-								<object class="NSColor" key="NSTextColor" id="867396516">
-									<int key="NSColorSpace">6</int>
-									<string key="NSCatalogName">System</string>
-									<string key="NSColorName">controlTextColor</string>
-									<object class="NSColor" key="NSColor">
-										<int key="NSColorSpace">3</int>
-										<bytes key="NSWhite">MAA</bytes>
-									</object>
+								<object class="NSColor" key="NSTextColor" id="1043569451">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC45MzQ3ODI2MiAwLjkzNDc4MjYyIDAuOTM0NzgyNjIAA</bytes>
 								</object>
 							</object>
 						</object>
@@ -206,7 +194,26 @@
 								<reference key="NSSupport" ref="88075544"/>
 								<reference key="NSControlView" ref="753645226"/>
 								<reference key="NSBackgroundColor" ref="969125410"/>
-								<reference key="NSTextColor" ref="867396516"/>
+								<reference key="NSTextColor" ref="1043569451"/>
+							</object>
+						</object>
+						<object class="NSTextField" id="792133865">
+							<reference key="NSNextResponder" ref="143712367"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{77, 59}, {127, 17}}</string>
+							<reference key="NSSuperview" ref="143712367"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSTextFieldCell" key="NSCell" id="757739282">
+								<int key="NSCellFlags">68288064</int>
+								<int key="NSCellFlags2">272630784</int>
+								<string key="NSContents">Option-Shift-Space</string>
+								<reference key="NSSupport" ref="88075544"/>
+								<reference key="NSControlView" ref="792133865"/>
+								<reference key="NSBackgroundColor" ref="969125410"/>
+								<object class="NSColor" key="NSTextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC45MzQ3ODI2MiAwLjkzNDc4MjYyIDAuOTM0NzgyNjIAA</bytes>
+								</object>
 							</object>
 						</object>
 					</object>
@@ -250,14 +257,6 @@
 						<reference key="destination" ref="830423511"/>
 					</object>
 					<int key="connectionID">22</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">recorder</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="274014185"/>
-					</object>
-					<int key="connectionID">23</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -355,8 +354,8 @@
 							<reference ref="753645226"/>
 							<reference ref="755459460"/>
 							<reference ref="63952279"/>
-							<reference ref="274014185"/>
 							<reference ref="327987454"/>
+							<reference ref="792133865"/>
 						</object>
 						<reference key="parent" ref="830423511"/>
 					</object>
@@ -385,11 +384,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="505761804"/>
 						</object>
-						<reference key="parent" ref="143712367"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">6</int>
-						<reference key="object" ref="274014185"/>
 						<reference key="parent" ref="143712367"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -453,6 +447,20 @@
 						<reference key="object" ref="1061924496"/>
 						<reference key="parent" ref="1002"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">45</int>
+						<reference key="object" ref="792133865"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="757739282"/>
+						</object>
+						<reference key="parent" ref="143712367"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">46</int>
+						<reference key="object" ref="757739282"/>
+						<reference key="parent" ref="792133865"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -480,8 +488,9 @@
 					<string>3.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>40.IBPluginDependency</string>
+					<string>45.IBPluginDependency</string>
+					<string>46.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
-					<string>6.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
@@ -499,6 +508,7 @@
 					<reference ref="5"/>
 					<string>{312, 99}</string>
 					<string>{200, 99}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -536,60 +546,14 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">41</int>
+			<int key="maxID">46</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/ShortcutRecorder/SRRecorderCell.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="7446701">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/ShortcutRecorder/SRRecorderControl.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">Classes/ShortcutRecorder/SRValidator.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SRRecorderControl</string>
-					<string key="superclassName">NSControl</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">forIBuse__nilOutDeprecatedAutosaveName:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">delegate</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<reference key="sourceIdentifier" ref="7446701"/>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SRRecorderControl</string>
-					<string key="superclassName">NSControl</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBUserSource</string>
-						<string key="minorKey"/>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
 					<string key="className">USSettingsController</string>
 					<string key="superclassName">NSWindowController</string>
-					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">recorder</string>
-						<string key="NS.object.0">SRRecorderControl</string>
-					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">Classes/Settings/USSettingsController.h</string>

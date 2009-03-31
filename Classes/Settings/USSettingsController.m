@@ -7,17 +7,7 @@
 //
 
 #import "USSettingsController.h"
-
-KeyCombo keyComboFromPTKeyCombo(PTKeyCombo *keyCombo){
-	KeyCombo newCombo;
-	newCombo.code = [keyCombo keyCode];
-	newCombo.flags = [keyCombo modifiers];
-	return newCombo;
-}
-
-PTKeyCombo* ptKeyComboFromKeyCombo(KeyCombo keyCombo){
-	return [PTKeyCombo keyComboWithKeyCode:keyCombo.code modifiers:keyCombo.flags];
-}
+#import "MAAttachedWindow.h"
 
 @implementation USSettingsController
 
@@ -25,46 +15,26 @@ objc_singleton(USSettingsController, sharedSettings)
 
 -(id)init{
 	if(self = [super initWithWindowNibName:@"Settings"]){
-		id aKeyCombo = nil;
-		NSDictionary *plist = [[NSUserDefaults standardUserDefaults] objectForKey:@"keyCombo"];
-		if(plist){
-			aKeyCombo = [[[PTKeyCombo alloc] initWithPlistRepresentation:plist] autorelease];
-		}
-		if(!aKeyCombo){
-			aKeyCombo = [PTKeyCombo keyComboWithKeyCode:7 // X 
-											  modifiers:optionKey];
-		}
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateKeyCombo:) name:kUSKeyComboChangedNotification object:nil];
-		[self setKeyCombo:aKeyCombo];
+		[self setWindow:[USSettingsController bubbleWindowForWindow:[self window]]];
 	}
 	return self;
 }
 
--(void)setKeyCombo:(PTKeyCombo *)aKeyCombo{
-	if((keyCombo == aKeyCombo) || ([aKeyCombo isEqual:keyCombo])) return;
++(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window{
+	NSRect frame = [[NSScreen mainScreen] frame];
 	
-	[keyCombo release];
-	keyCombo = [aKeyCombo retain];
+	MAAttachedWindow *newWindow = [[MAAttachedWindow alloc] initWithView:[window contentView] 
+														 attachedToPoint:NSMakePoint(frame.size.width / 2, frame.size.height-25) 
+																  onSide:(MAWindowPosition)MAPositionBottom	];
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:kUSKeyComboChangedNotification object:keyCombo];
-}
-
--(void)awakeFromNib{
-	[recorder setDelegate:self];
-	[self updateKeyCombo:nil];
-}
-
--(void)updateKeyCombo:(NSNotification *)notif{
-	[recorder setKeyCombo:keyComboFromPTKeyCombo(keyCombo)];
+	[newWindow setBorderWidth:1.0];
+	[newWindow setBorderColor:[NSColor colorWithCalibratedWhite:0.2 alpha:0.75]];
+	
+	return [newWindow autorelease];
 }
 
 -(USShrinkController *)shrinkController{
 	return [USShrinkController sharedShrinkController];
 }
 
-- (void)shortcutRecorder:(SRRecorderCell *)aRecorderCell keyComboDidChange:(KeyCombo)newKeyCombo{
-	PTKeyCombo *aKeyCombo = ptKeyComboFromKeyCombo(newKeyCombo);
-	[self setKeyCombo:aKeyCombo];
-	
-}
 @end
