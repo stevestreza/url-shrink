@@ -9,10 +9,12 @@
 #import "USIncludes.h"
 #import <Carbon/Carbon.h>
 #import "USURLShrinker.h"
+#import "PTHotKey.h"
 
 @interface USAppController : NSObject {
+	PTHotKey *hotKey;
 }
 
--(void)shrinkURL:(EventRef)ev;
-
+//-(void)shrinkURL:(EventRef)ev;
+-(void)shrinkURL:(id)something;
 @end

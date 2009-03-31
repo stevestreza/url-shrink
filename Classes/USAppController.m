@@ -9,6 +9,7 @@
 #import "USAppController.h"
 #import "USShrinkController.h"
 #import "USSettingsController.h"
+#import "PTHotKeyCenter.h"
 
 OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData);
 
@@ -22,8 +23,6 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 @implementation USAppController
 
 -(void)awakeFromNib{
-	EventHotKeyRef myHotKeyRef;
-    EventHotKeyID myHotKeyID;
     EventTypeSpec eventType;
 	
 	eventType.eventClass=kEventClassKeyboard;
@@ -31,16 +30,27 @@ OSStatus handleShrinkHotKey(EventHandlerCallRef nextHandler, EventRef anEvent, v
 	
 	InstallApplicationEventHandler(&handleShrinkHotKey,1,&eventType,self,NULL);
 	
-	myHotKeyID.signature='mhk1';
-    myHotKeyID.id=1;
-	
-	RegisterEventHotKey(7, optionKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
-	
-	USSettingsController *settings = [[USSettingsController alloc] init];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateKeyCombo:) name:kUSKeyComboChangedNotification object:nil];
+	USSettingsController *settings = [USSettingsController sharedSettings];
 	[settings showWindow:self];
 }
 
--(void)shrinkURL:(EventRef)ev{
+-(void)updateKeyCombo:(NSNotification *)notif{
+	PTKeyCombo *keyCombo = [notif object];
+
+	if(!hotKey){
+		hotKey = [[PTHotKey alloc] initWithIdentifier:@"whee" keyCombo:keyCombo];
+		[hotKey setTarget:self];
+		[hotKey setAction:@selector(shrinkURL:)];
+	}else{
+		[[PTHotKeyCenter sharedCenter] unregisterHotKey:hotKey];
+		[hotKey setKeyCombo:keyCombo];
+	}
+	[[PTHotKeyCenter sharedCenter] registerHotKey:hotKey];
+}
+
+//-(void)shrinkURL:(EventRef)ev{
+-(void)shrinkURL:(id)something{
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
 	NSArray *types = [pboard types];
 	NSLog(@"types! %@",types);

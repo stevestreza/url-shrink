@@ -9,11 +9,17 @@
 #import <Cocoa/Cocoa.h>
 #import "SRRecorderControl.h"
 #import "USShrinkController.h"
+#import "PTKeyCombo.h"
+
+#define kUSKeyComboChangedNotification @"kUSKeyComboChangedNotification"
 
 @interface USSettingsController : NSWindowController {
 	IBOutlet SRRecorderControl *recorder;
+	
+	PTKeyCombo *keyCombo;
 }
 
++(USSettingsController *)sharedSettings;
 -(USShrinkController *)shrinkController;
 
 @end
