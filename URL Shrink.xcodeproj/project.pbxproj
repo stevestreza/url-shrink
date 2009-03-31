@@ -13,6 +13,7 @@
 		1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D958B0F818BD600C77274 /* USSettingsController.m */; };
 		1E8D958F0F818C3700C77274 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D958D0F818C3700C77274 /* Settings.xib */; };
 		1E8D987E0F81DEFA00C77274 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */; };
+		1E8D98B30F81E6E600C77274 /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D98B20F81E6E600C77274 /* clipboard.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -43,6 +44,7 @@
 		1E8D958E0F818C3700C77274 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Settings.xib; sourceTree = "<group>"; };
 		1E8D987C0F81DEFA00C77274 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
 		1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
+		1E8D98B20F81E6E600C77274 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -200,6 +202,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E8D98B20F81E6E600C77274 /* clipboard.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -279,6 +282,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				1E8D958F0F818C3700C77274 /* Settings.xib in Resources */,
+				1E8D98B30F81E6E600C77274 /* clipboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

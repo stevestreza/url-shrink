@@ -10,6 +10,7 @@
 #import "USShrinkController.h"
 
 @interface USSettingsController : NSWindowController {
+	IBOutlet NSStatusItem *statusItem;
 }
 
 +(USSettingsController *)sharedSettings;

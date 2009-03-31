@@ -9,23 +9,60 @@
 #import "USSettingsController.h"
 #import "MAAttachedWindow.h"
 
+@interface NSStatusItem (hack)
+- (NSRect)hackFrame;
+@end
+
+@implementation NSStatusItem (hack)
+- (NSRect)hackFrame
+{
+	return [_fWindow frame];
+}
+@end
+
 @implementation USSettingsController
 
 objc_singleton(USSettingsController, sharedSettings)
 
 -(id)init{
 	if(self = [super initWithWindowNibName:@"Settings"]){
-		[self setWindow:[USSettingsController bubbleWindowForWindow:[self window]]];
+		[self setupStatusItem];
+		[self setWindow:[USSettingsController bubbleWindowForWindow:[self window]
+														 statusItem:statusItem]];
 	}
 	return self;
 }
 
-+(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window{
-	NSRect frame = [[NSScreen mainScreen] frame];
+-(void)setupStatusItem{
+	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+	
+	NSImage *clipboardImage = [NSImage imageNamed:@"clipboard"];
+	[statusItem setImage:clipboardImage];
+	
+	[statusItem setHighlightMode:YES];
+	
+	[statusItem setTarget:self];
+	[statusItem setAction:@selector(toggleWindow:)];
+}
+
+-(void)toggleWindow:sender{
+	if(![[self window] isVisible]){
+		[self showWindow:sender];
+	}else{
+		[self close];
+	}
+}
+
++(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window statusItem:(NSStatusItem *)aStatusItem{
+	NSRect hackFrame = [aStatusItem hackFrame];
+	NSPoint centerPoint = NSMakePoint(hackFrame.origin.x + (hackFrame.size.width/2.), 
+									  hackFrame.origin.y - (hackFrame.size.height*3/4.));
 	
 	MAAttachedWindow *newWindow = [[MAAttachedWindow alloc] initWithView:[window contentView] 
-														 attachedToPoint:NSMakePoint(frame.size.width / 2, frame.size.height-25) 
+														 attachedToPoint:centerPoint
 																  onSide:(MAWindowPosition)MAPositionBottom	];
+	
+	[newWindow setLevel:NSStatusWindowLevel+1];
 	
 	[newWindow setBorderWidth:1.0];
 	[newWindow setBorderColor:[NSColor colorWithCalibratedWhite:0.2 alpha:0.75]];
