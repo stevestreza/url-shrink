@@ -95,8 +95,6 @@
 			children = (
 				1E8D95890F818B8A00C77274 /* Settings */,
 				1E8D95780F8184D400C77274 /* Core */,
-				1E8D95020F8181B300C77274 /* ShortcutRecorder */,
-				1E8D95010F8181AE00C77274 /* Hotkey */,
 				AA796A8A0F811D2900D9C477 /* USAppController.h */,
 				AA796A8B0F811D2900D9C477 /* USAppController.m */,
 			);
@@ -129,20 +127,6 @@
 				AA796D7E0F81546300D9C477 /* shrink */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		1E8D95010F8181AE00C77274 /* Hotkey */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Hotkey;
-			sourceTree = "<group>";
-		};
-		1E8D95020F8181B300C77274 /* ShortcutRecorder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ShortcutRecorder;
 			sourceTree = "<group>";
 		};
 		1E8D95780F8184D400C77274 /* Core */ = {

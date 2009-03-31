@@ -1,0 +1,46 @@
+URL Shrink
+----------
+URL Shrink is an OS X tool for converting URLs to shorter permalinks on various web services. It was designed to make it extremely easy to write a bit of code to integrate with other web services, including private URL services. Users can also specify their preferred service which is saved as a default.
+
+License
+-------
+URL Shrink is licensed under the BSD license, and its adoption within Mac and iPhone applications is encouraged.
+
+Wishlist
+--------
+
+- Automatic downtime detection and re-routing
+- Compiled .framework and .a for including in Mac and iPhone apps, respectively
+- Text service
+- Command line client
+- Shared default selection across applications (and sync across machines with MobileMe/Dropbox/etc.)
+
+Installation
+------------
+Grab the source code from GitHub. You'll need to grab the TCDownload class from a different GitHub repository (http://github.com/amazingsyco/technicolor/tree/master). Compile the application and run.
+
+Use
+---
+Run the application and copy a URL to the clipboard. Then, press Option-Shift-Space (hardwired for now). It will convert the 
+
+URL Shrinkers
+-------------
+There are three shrinkers in the system right now:
+
+1. Loopback - This is mainly for debugging, it simply returns the URL you submitted
+2. TinyURL
+3. is.gd
+
+Writing a URL Shrinker
+----------------------
+You need to write three methods in your URL shrinker:
+
+-(void)performShrinkOnURL:(NSURL *)url;
+This performs the guts of the shrink. You can schedule asynchronous operations to run, such as NSURLRequests. Whenever the URL is retrieved (which doesn't have to be in this method), you must call doneShrinking:, supplying either the shrunken URL or nil if there was an error.
+
++(NSString *)name;
+Must return a human-readable and unique name for your URL shrinker.
+
++load{ // just copy this verbatim
+	[self registerShrinker];
+}
