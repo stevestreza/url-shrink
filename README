@@ -21,7 +21,7 @@ Grab the source code from GitHub. You'll need to grab the TCDownload class from 
 
 Use
 ---
-Run the application and copy a URL to the clipboard. Then, press Option-Shift-Space (hardwired for now). It will convert the 
+Run the application and copy a URL to the clipboard. Then, press Option-Shift-Space (hardwired for now). It will convert the URL to a shrunken URL in the background and replace it. That's all it can do for now.
 
 URL Shrinkers
 -------------
