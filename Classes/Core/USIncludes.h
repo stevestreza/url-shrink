@@ -1,4 +1,4 @@
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #define objc_singleton(x, y) static x * y = nil; \
 + ( x * ) y {@synchronized(self) {if ( y == nil) {[[self alloc] init];}} return y;} \

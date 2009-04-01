@@ -6,7 +6,7 @@
 //  Copyright 2009 Steve Streza. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "USIncludes.h"
 #import "USURLShrinker.h"
 
 @interface USLoopbackShrinker : USURLShrinker {
