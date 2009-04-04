@@ -9,11 +9,12 @@
 #import "USIncludes.h"
 
 @interface USURLShrinker : NSObject {
+	NSURL *sourceURL;
+	
 	id _target;
 	SEL _action;
 }
 
-<<<<<<< HEAD:Classes/Core/USURLShrinker.h
 #pragma mark Methods for subclasses
 
 +(NSString *)name;
@@ -41,6 +42,5 @@
 
 -(void)doneExpanding:(NSURL *)url;
 -(void)doneShrinking:(NSURL *)url;
-=======
->>>>>>> 3692fbd... Added URL expansion support to is.gd:Classes/Core/USURLShrinker.h
+
 @end

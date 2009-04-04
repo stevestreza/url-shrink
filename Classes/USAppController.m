@@ -86,8 +86,20 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	if(url){
 		NSLog(@"Shrinking URL %@",url);
 		
-		USURLShrinker *shrinker = [[USShrinkController sharedShrinkController] shrinker];
-		[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
+		BOOL handled = NO;
+		for(Class shrinkerClass in [[USShrinkController sharedShrinkController] allShrinkers]){
+			if([shrinkerClass canExpandURL:url]){
+				USURLShrinker *shrinker = [[shrinkerClass alloc] init];
+				[shrinker expandURL:url target:self action:@selector(URLExpanded:)];
+				
+				handled = YES;
+			}
+		}
+		
+		if(!handled){
+			USURLShrinker *shrinker = [[USShrinkController sharedShrinkController] shrinker];
+			[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
+		}
 	}
 }
 
@@ -100,7 +112,6 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	return isValid;
 }
 
-<<<<<<< HEAD:Classes/USAppController.m
 -(void)URLExpanded:(NSURL *)newURL{
 	if([newURL isKindOfClass:[NSString class]]){
 		newURL = [NSURL URLWithString:(NSString *)newURL];
@@ -115,15 +126,12 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	[pboard setString:[url absoluteString] forType:NSStringPboardType];		
 }
 
-=======
->>>>>>> 3692fbd... Added URL expansion support to is.gd:Classes/USAppController.m
 -(void)URLShrunk:(NSURL *)newURL{
 	if([newURL isKindOfClass:[NSString class]]){
 		newURL = [NSURL URLWithString:(NSString *)newURL];
 	}
 	
-	[[NSPasteboard generalPasteboard] declareTypes:[NSArray arrayWithObject:NSURLPboardType] owner:self];
-	[newURL writeToPasteboard:[NSPasteboard generalPasteboard]];
+	[self writeURL:newURL toPasteboard:[NSPasteboard generalPasteboard]];
 }
 
 @end

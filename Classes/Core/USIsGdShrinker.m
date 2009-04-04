@@ -33,4 +33,21 @@
 	[self doneShrinking:tinyURL];	
 }
 
++(BOOL)canExpandURL:(NSURL *)url{
+	return ([[url host] isEqual:@"is.gd"]);
+}
+
+-(void)performExpandOnURL:(NSURL *)url{
+	TCDownload *download = [[TCDownload alloc] initWithURL:url];
+	[download setDelegate:self];
+	[download send];
+}
+
+-(BOOL)download:(TCDownload *)download shouldRedirectToURL:(NSURL *)url{
+	if([url isEqual:sourceURL]) return YES;
+	
+	[self doneExpanding:url];
+	return NO;
+}
+
 @end
