@@ -17,7 +17,7 @@ Wishlist
 
 Installation
 ------------
-Grab the source code from GitHub. You'll need to grab the TCDownload class from a different GitHub repository (http://github.com/amazingsyco/technicolor/tree/master). Compile the application and run.
+Grab the source code from GitHub. After you clone, be sure to check out submodules. Compile the application and run.
 
 Use
 ---

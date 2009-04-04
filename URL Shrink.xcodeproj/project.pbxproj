@@ -10,8 +10,6 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		1E433D400F8339DD001FC357 /* USURLShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796A870F811D1800D9C477 /* USURLShrinker.h */; };
 		1E433D410F8339DD001FC357 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
-		1E433D420F8339DD001FC357 /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796BD40F8120AC00D9C477 /* TCDownload.h */; };
-		1E433D430F8339DD001FC357 /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796BD50F8120AC00D9C477 /* TCDownload.m */; };
 		1E433D440F8339DD001FC357 /* USShrinkController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C3A0F8130EE00D9C477 /* USShrinkController.h */; };
 		1E433D450F8339DD001FC357 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
 		1E433D460F8339DD001FC357 /* USIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C610F81386500D9C477 /* USIncludes.h */; };
@@ -25,7 +23,6 @@
 		1E433D560F833A51001FC357 /* URLShrink.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E433D3B0F8339CB001FC357 /* URLShrink.framework */; };
 		1E433D5D0F833A58001FC357 /* URLShrink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E433D3B0F8339CB001FC357 /* URLShrink.framework */; };
 		1E433D9C0F833B2B001FC357 /* USIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C610F81386500D9C477 /* USIncludes.h */; };
-		1E433D9D0F833B2B001FC357 /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796BD40F8120AC00D9C477 /* TCDownload.h */; };
 		1E433D9E0F833B2B001FC357 /* USLoopbackShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796D3A0F8144E200D9C477 /* USLoopbackShrinker.h */; };
 		1E433D9F0F833B2B001FC357 /* USIsGdShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C850F813BB100D9C477 /* USIsGdShrinker.h */; };
 		1E433DA00F833B2B001FC357 /* USURLShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796A870F811D1800D9C477 /* USURLShrinker.h */; };
@@ -36,7 +33,6 @@
 		1E433DA60F833B39001FC357 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E433DA70F833B39001FC357 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
 		1E433DA80F833B39001FC357 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
-		1E433DA90F833B39001FC357 /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796BD50F8120AC00D9C477 /* TCDownload.m */; };
 		1E8D94E30F81808200C77274 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D958B0F818BD600C77274 /* USSettingsController.m */; };
 		1E8D958F0F818C3700C77274 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D958D0F818C3700C77274 /* Settings.xib */; };
@@ -46,6 +42,10 @@
 		1EC4BA120F87373600E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BA100F87373600E91EEC /* USDiggShrinker.m */; };
 		1EC4BA130F87373600E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */; };
 		1EC4BA140F87373600E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BA100F87373600E91EEC /* USDiggShrinker.m */; };
+		1EC4BB1D0F87423B00E91EEC /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB1B0F87423B00E91EEC /* TCDownload.h */; };
+		1EC4BB1E0F87423B00E91EEC /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB1C0F87423B00E91EEC /* TCDownload.m */; };
+		1EC4BB380F87423B00E91EEC /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB1B0F87423B00E91EEC /* TCDownload.h */; };
+		1EC4BB390F87423B00E91EEC /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB1C0F87423B00E91EEC /* TCDownload.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -100,6 +100,8 @@
 		1E8D98B20F81E6E600C77274 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
 		1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USDiggShrinker.h; sourceTree = "<group>"; };
 		1EC4BA100F87373600E91EEC /* USDiggShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USDiggShrinker.m; sourceTree = "<group>"; };
+		1EC4BB1B0F87423B00E91EEC /* TCDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDownload.h; sourceTree = "<group>"; };
+		1EC4BB1C0F87423B00E91EEC /* TCDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDownload.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -111,8 +113,6 @@
 		AA796A8A0F811D2900D9C477 /* USAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAppController.h; sourceTree = "<group>"; };
 		AA796A8B0F811D2900D9C477 /* USAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USAppController.m; sourceTree = "<group>"; };
 		AA796A8D0F811D6000D9C477 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		AA796BD40F8120AC00D9C477 /* TCDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCDownload.h; path = ../../../../Technicolor/technicolor/Classes/TCCore/Utilities/TCDownload.h; sourceTree = "<group>"; };
-		AA796BD50F8120AC00D9C477 /* TCDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCDownload.m; path = ../../../../Technicolor/technicolor/Classes/TCCore/Utilities/TCDownload.m; sourceTree = "<group>"; };
 		AA796C3A0F8130EE00D9C477 /* USShrinkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USShrinkController.h; sourceTree = "<group>"; };
 		AA796C3B0F8130EE00D9C477 /* USShrinkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USShrinkController.m; sourceTree = "<group>"; };
 		AA796C610F81386500D9C477 /* USIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USIncludes.h; sourceTree = "<group>"; };
@@ -164,6 +164,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1EC4BAF10F87423B00E91EEC /* SSCore */,
 				1EC4B9660F872A9700E91EEC /* Handlers */,
 				1E8D95890F818B8A00C77274 /* Settings */,
 				AA796A8A0F811D2900D9C477 /* USAppController.h */,
@@ -250,8 +251,6 @@
 				AA796C610F81386500D9C477 /* USIncludes.h */,
 				AA796A870F811D1800D9C477 /* USURLShrinker.h */,
 				AA796A880F811D1800D9C477 /* USURLShrinker.m */,
-				AA796BD40F8120AC00D9C477 /* TCDownload.h */,
-				AA796BD50F8120AC00D9C477 /* TCDownload.m */,
 				AA796C3A0F8130EE00D9C477 /* USShrinkController.h */,
 				AA796C3B0F8130EE00D9C477 /* USShrinkController.m */,
 			);
@@ -274,6 +273,15 @@
 				1EC4BA100F87373600E91EEC /* USDiggShrinker.m */,
 			);
 			name = Digg;
+			sourceTree = "<group>";
+		};
+		1EC4BAF10F87423B00E91EEC /* SSCore */ = {
+			isa = PBXGroup;
+			children = (
+				1EC4BB1B0F87423B00E91EEC /* TCDownload.h */,
+				1EC4BB1C0F87423B00E91EEC /* TCDownload.m */,
+			);
+			path = SSCore;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* URL Shrink */ = {
@@ -328,13 +336,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E433D400F8339DD001FC357 /* USURLShrinker.h in Headers */,
-				1E433D420F8339DD001FC357 /* TCDownload.h in Headers */,
 				1E433D440F8339DD001FC357 /* USShrinkController.h in Headers */,
 				1E433D460F8339DD001FC357 /* USIncludes.h in Headers */,
 				1E433D470F8339DD001FC357 /* USIsGdShrinker.h in Headers */,
 				1E433D490F8339DD001FC357 /* USLoopbackShrinker.h in Headers */,
 				1E433D4B0F8339DD001FC357 /* USTinyurlShrinker.h in Headers */,
 				1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */,
+				1EC4BB380F87423B00E91EEC /* TCDownload.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,13 +351,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E433D9C0F833B2B001FC357 /* USIncludes.h in Headers */,
-				1E433D9D0F833B2B001FC357 /* TCDownload.h in Headers */,
 				1E433D9E0F833B2B001FC357 /* USLoopbackShrinker.h in Headers */,
 				1E433D9F0F833B2B001FC357 /* USIsGdShrinker.h in Headers */,
 				1E433DA00F833B2B001FC357 /* USURLShrinker.h in Headers */,
 				1E433DA10F833B2B001FC357 /* USTinyurlShrinker.h in Headers */,
 				1E433DA20F833B2B001FC357 /* USShrinkController.h in Headers */,
 				1EC4BA130F87373600E91EEC /* USDiggShrinker.h in Headers */,
+				1EC4BB1D0F87423B00E91EEC /* TCDownload.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,12 +482,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E433D410F8339DD001FC357 /* USURLShrinker.m in Sources */,
-				1E433D430F8339DD001FC357 /* TCDownload.m in Sources */,
 				1E433D450F8339DD001FC357 /* USShrinkController.m in Sources */,
 				1E433D480F8339DD001FC357 /* USIsGdShrinker.m in Sources */,
 				1E433D4A0F8339DD001FC357 /* USLoopbackShrinker.m in Sources */,
 				1E433D4C0F8339DD001FC357 /* USTinyurlShrinker.m in Sources */,
 				1EC4BA120F87373600E91EEC /* USDiggShrinker.m in Sources */,
+				1EC4BB390F87423B00E91EEC /* TCDownload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,8 +500,8 @@
 				1E433DA60F833B39001FC357 /* USTinyurlShrinker.m in Sources */,
 				1E433DA70F833B39001FC357 /* USURLShrinker.m in Sources */,
 				1E433DA80F833B39001FC357 /* USShrinkController.m in Sources */,
-				1E433DA90F833B39001FC357 /* TCDownload.m in Sources */,
 				1EC4BA140F87373600E91EEC /* USDiggShrinker.m in Sources */,
+				1EC4BB1E0F87423B00E91EEC /* TCDownload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
