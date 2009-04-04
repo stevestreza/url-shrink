@@ -42,4 +42,25 @@
 	
 }
 
++(BOOL)canExpandURL:(NSURL *)url{
+	return ([[url host] isEqualToString:@"digg.com"]);
+}
+
+-(void)performExpandOnURL:(NSURL *)url{
+	NSString *html = [TCDownload loadResourceStringForURL:url encoding:NSUTF8StringEncoding];
+	NSScanner *scanner = [[NSScanner alloc] initWithString:html];
+	[scanner scanUpToString:@"<iframe" intoString:nil];
+	[scanner scanUpToString:@"src=\"" intoString:nil];
+	
+	[scanner setScanLocation:[scanner scanLocation] + ([@"src=\"" length])];
+	
+	NSString *source = nil;
+	[scanner scanUpToString:@"\"" intoString:&source];
+	
+	if(source){
+		NSURL *url = [NSURL URLWithString:source];
+		[self doneExpanding:url];
+	}
+}
+
 @end
