@@ -42,6 +42,10 @@
 		1E8D958F0F818C3700C77274 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D958D0F818C3700C77274 /* Settings.xib */; };
 		1E8D987E0F81DEFA00C77274 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */; };
 		1E8D98B30F81E6E600C77274 /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D98B20F81E6E600C77274 /* clipboard.png */; };
+		1EC4B9B90F872FC400E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4B9B70F872FC400E91EEC /* USDiggShrinker.h */; };
+		1EC4B9BA0F872FC400E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4B9B80F872FC400E91EEC /* USDiggShrinker.m */; };
+		1EC4B9BB0F872FC400E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4B9B70F872FC400E91EEC /* USDiggShrinker.h */; };
+		1EC4B9BC0F872FC400E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4B9B80F872FC400E91EEC /* USDiggShrinker.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -94,6 +98,8 @@
 		1E8D987C0F81DEFA00C77274 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
 		1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
 		1E8D98B20F81E6E600C77274 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
+		1EC4B9B70F872FC400E91EEC /* USDiggShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USDiggShrinker.h; sourceTree = "<group>"; };
+		1EC4B9B80F872FC400E91EEC /* USDiggShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USDiggShrinker.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -220,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				1EC4B9680F872AAA00E91EEC /* Core */,
+				1EC4B9B60F872F0D00E91EEC /* Digg */,
 				1EC4B9690F872ABC00E91EEC /* Tinyurl */,
 				1EC4B9670F872AA200E91EEC /* is.gd */,
 				1EC4B9650F872A8F00E91EEC /* Loopback */,
@@ -258,6 +265,15 @@
 				1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */,
 			);
 			name = Tinyurl;
+			sourceTree = "<group>";
+		};
+		1EC4B9B60F872F0D00E91EEC /* Digg */ = {
+			isa = PBXGroup;
+			children = (
+				1EC4B9B70F872FC400E91EEC /* USDiggShrinker.h */,
+				1EC4B9B80F872FC400E91EEC /* USDiggShrinker.m */,
+			);
+			name = Digg;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* URL Shrink */ = {
@@ -318,6 +334,7 @@
 				1E433D470F8339DD001FC357 /* USIsGdShrinker.h in Headers */,
 				1E433D490F8339DD001FC357 /* USLoopbackShrinker.h in Headers */,
 				1E433D4B0F8339DD001FC357 /* USTinyurlShrinker.h in Headers */,
+				1EC4B9B90F872FC400E91EEC /* USDiggShrinker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +349,7 @@
 				1E433DA00F833B2B001FC357 /* USURLShrinker.h in Headers */,
 				1E433DA10F833B2B001FC357 /* USTinyurlShrinker.h in Headers */,
 				1E433DA20F833B2B001FC357 /* USShrinkController.h in Headers */,
+				1EC4B9BB0F872FC400E91EEC /* USDiggShrinker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +479,7 @@
 				1E433D480F8339DD001FC357 /* USIsGdShrinker.m in Sources */,
 				1E433D4A0F8339DD001FC357 /* USLoopbackShrinker.m in Sources */,
 				1E433D4C0F8339DD001FC357 /* USTinyurlShrinker.m in Sources */,
+				1EC4B9BA0F872FC400E91EEC /* USDiggShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +493,7 @@
 				1E433DA70F833B39001FC357 /* USURLShrinker.m in Sources */,
 				1E433DA80F833B39001FC357 /* USShrinkController.m in Sources */,
 				1E433DA90F833B39001FC357 /* TCDownload.m in Sources */,
+				1EC4B9BC0F872FC400E91EEC /* USDiggShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

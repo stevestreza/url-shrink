@@ -11,7 +11,6 @@
 #import "USSettingsController.h"
 
 OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData){
-    NSLog(@"YEAY WE DID A GLOBAL HOTKEY");
 	USAppController *self = (USAppController *)userData;
 	[self handleHotKeyEvent:anEvent];
     return noErr;	
@@ -24,14 +23,6 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	[settings showWindow:self];
 	
 	[self setupKeyboardHandlers];
-	
-	[[USShrinkController sharedShrinkController] expandURL:[NSURL URLWithString:@"http://is.gd/pKZE"]
-													target:self
-													action:@selector(expandedURL:)];
-}
-	
--(void)expandedURL:(NSURL *)url{
-	NSLog(@"OH CALCULON YOUR URL IS %@",url);
 }
 
 -(void)setupKeyboardHandlers{
@@ -47,7 +38,6 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	myHotKeyID.signature='mhk1';
     myHotKeyID.id=1;
 	
-	NSLog(@"Hotkey registered, WUT");
 	RegisterEventHotKey(49, shiftKey+optionKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
 }
 
@@ -77,8 +67,7 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 -(void)handleHotKeyEvent:(EventRef)ev{
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
 	NSArray *types = [pboard types];
-	NSLog(@"types! %@",types);
-	
+
 	NSString *urlString = nil;
 	NSURL *url = nil;
 	
@@ -124,7 +113,6 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	if([newURL isKindOfClass:[NSString class]]){
 		newURL = [NSURL URLWithString:(NSString *)newURL];
 	}
-	NSLog(@"whee! %@",newURL);
 	
 	[self writeURL:newURL toPasteboard:[NSPasteboard generalPasteboard]];
 }	
@@ -139,7 +127,6 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	if([newURL isKindOfClass:[NSString class]]){
 		newURL = [NSURL URLWithString:(NSString *)newURL];
 	}
-	NSLog(@"whee! %@",newURL);
 	
 	[self writeURL:newURL toPasteboard:[NSPasteboard generalPasteboard]];
 }

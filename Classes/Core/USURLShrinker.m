@@ -22,6 +22,14 @@
 	[[USShrinkController sharedShrinkController] registerShrinkClass:self];	
 }
 
++(BOOL)requiresAPIKey{
+	return NO;
+}
+
++(id)APIKey{
+	return nil;
+}
+
 +(NSString *)name{
 	return nil;
 }

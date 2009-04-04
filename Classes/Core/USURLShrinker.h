@@ -21,6 +21,10 @@
 -(void)performExpandOnURL:(NSURL *)url;
 -(void)performShrinkOnURL:(NSURL *)url;
 
+//optional, implement these if your service requires an API key
++(BOOL)requiresAPIKey;
++(id)APIKey;
+
 #pragma mark Internals
 
 +(void)registerShrinker;
