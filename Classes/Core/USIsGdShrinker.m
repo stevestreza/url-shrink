@@ -20,40 +20,6 @@
 	return @"is.gd";
 }
 
-+(BOOL)canExpandURL:(NSURL *)url{
-	return [[url host] isEqualToString:@"is.gd"];
-}
-
--(void)performExpandOnURL:(NSURL *)url{
-	expandURL = [url copy];
-	
-	TCDownload *download = [[TCDownload alloc] initWithURL:expandURL];
-	[download setDelegate:self];
-	[download performSelectorOnMainThread:@selector(send) withObject:nil waitUntilDone:NO];
-}
-
--(BOOL)download:(TCDownload *)download shouldRedirectToURL:(NSURL *)url{
-	NSLog(@"ShouldRedirectToURL: %@",url);
-	if([url isEqual:expandURL]){
-		return YES;
-	}else{
-		[self performSelector:@selector(doneExpanding:) withObject:[[url copy] autorelease] afterDelay:0.0];
-		[download cancel];
-		[download release];
-		return NO;
-	}
-}
-
--(void)downloadFinished:(TCDownload *)download{
-	[self doneExpanding:nil];
-	[download release];
-}
-
--(void)download:(TCDownload *)download hadError:(NSError *)error{
-	[self doneExpanding:nil];
-	[download release];
-}
-
 -(void)performShrinkOnURL:(NSURL *)url{
 	NSString *newURLString = [NSString stringWithFormat:@"http://is.gd/api.php?longurl=%@",[url absoluteString]];
 	NSURL *newURL = [NSURL URLWithString:newURLString];

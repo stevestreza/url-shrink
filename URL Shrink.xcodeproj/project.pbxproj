@@ -64,7 +64,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1E433D3A0F8339CB001FC357;
+			remoteGlobalIDString = 1E433D3A0F8339CB001FC357 /* URLShrink */;
 			remoteInfo = URLShrink;
 		};
 /* End PBXContainerItemProxy section */
@@ -164,8 +164,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1EC4B9660F872A9700E91EEC /* Handlers */,
 				1E8D95890F818B8A00C77274 /* Settings */,
+				1E8D95780F8184D400C77274 /* Core */,
 				AA796A8A0F811D2900D9C477 /* USAppController.h */,
 				AA796A8B0F811D2900D9C477 /* USAppController.m */,
 			);
@@ -202,6 +202,7 @@
 			name = iPhone;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD:URL Shrink.xcodeproj/project.pbxproj
 		1E8D95890F818B8A00C77274 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,35 +237,37 @@
 			sourceTree = "<group>";
 		};
 		1EC4B9670F872AA200E91EEC /* is.gd */ = {
+=======
+		1E8D95780F8184D400C77274 /* Core */ = {
+>>>>>>> 3692fbd... Added URL expansion support to is.gd:URL Shrink.xcodeproj/project.pbxproj
 			isa = PBXGroup;
 			children = (
-				AA796C850F813BB100D9C477 /* USIsGdShrinker.h */,
-				AA796C860F813BB100D9C477 /* USIsGdShrinker.m */,
-			);
-			name = is.gd;
-			sourceTree = "<group>";
-		};
-		1EC4B9680F872AAA00E91EEC /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				AA796C610F81386500D9C477 /* USIncludes.h */,
 				AA796A870F811D1800D9C477 /* USURLShrinker.h */,
 				AA796A880F811D1800D9C477 /* USURLShrinker.m */,
 				AA796BD40F8120AC00D9C477 /* TCDownload.h */,
 				AA796BD50F8120AC00D9C477 /* TCDownload.m */,
 				AA796C3A0F8130EE00D9C477 /* USShrinkController.h */,
 				AA796C3B0F8130EE00D9C477 /* USShrinkController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		1EC4B9690F872ABC00E91EEC /* Tinyurl */ = {
-			isa = PBXGroup;
-			children = (
+				AA796C610F81386500D9C477 /* USIncludes.h */,
+				AA796C850F813BB100D9C477 /* USIsGdShrinker.h */,
+				AA796C860F813BB100D9C477 /* USIsGdShrinker.m */,
+				AA796D3A0F8144E200D9C477 /* USLoopbackShrinker.h */,
+				AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */,
 				1E8D94E00F81808200C77274 /* USTinyurlShrinker.h */,
 				1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */,
 			);
-			name = Tinyurl;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1E8D95890F818B8A00C77274 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1E8D987C0F81DEFA00C77274 /* MAAttachedWindow.h */,
+				1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */,
+				1E8D958A0F818BD600C77274 /* USSettingsController.h */,
+				1E8D958B0F818BD600C77274 /* USSettingsController.m */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		1EC4B9B60F872F0D00E91EEC /* Digg */ = {
