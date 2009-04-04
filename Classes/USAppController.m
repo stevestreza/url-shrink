@@ -24,6 +24,14 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	[settings showWindow:self];
 	
 	[self setupKeyboardHandlers];
+	
+	[[USShrinkController sharedShrinkController] expandURL:[NSURL URLWithString:@"http://is.gd/pKZE"]
+													target:self
+													action:@selector(expandedURL:)];
+}
+	
+-(void)expandedURL:(NSURL *)url{
+	NSLog(@"OH CALCULON YOUR URL IS %@",url);
 }
 
 -(void)setupKeyboardHandlers{
@@ -87,10 +95,19 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	}
 	
 	if(url){
-		NSLog(@"Shrinking URL %@",url);
+		BOOL handled = NO;
+		for(Class shrinkerClass in [[USShrinkController sharedShrinkController] allShrinkers]){
+			if([shrinkerClass canExpandURL:url]){
+				USURLShrinker *shrinker = [[shrinkerClass alloc] init];
+				[shrinker expandURL:url target:self action:@selector(URLExpanded:)];
+				handled = YES;
+			}
+		}
 		
-		USURLShrinker *shrinker = [[USShrinkController sharedShrinkController] shrinker];
-		[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
+		if(!handled){
+			USURLShrinker *shrinker = [[USShrinkController sharedShrinkController] shrinker];
+			[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
+		}
 	}
 }
 
@@ -103,14 +120,28 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 	return isValid;
 }
 
+-(void)URLExpanded:(NSURL *)newURL{
+	if([newURL isKindOfClass:[NSString class]]){
+		newURL = [NSURL URLWithString:(NSString *)newURL];
+	}
+	NSLog(@"whee! %@",newURL);
+	
+	[self writeURL:newURL toPasteboard:[NSPasteboard generalPasteboard]];
+}	
+
+-(void)writeURL:(NSURL *)url toPasteboard:(NSPasteboard *)pboard{
+	[pboard declareTypes:[NSArray arrayWithObjects:NSURLPboardType, NSStringPboardType,nil] owner:self];
+	[pboard setString:[url absoluteString] forType:NSURLPboardType];
+	[pboard setString:[url absoluteString] forType:NSStringPboardType];		
+}
+
 -(void)URLShrunk:(NSURL *)newURL{
 	if([newURL isKindOfClass:[NSString class]]){
 		newURL = [NSURL URLWithString:(NSString *)newURL];
 	}
 	NSLog(@"whee! %@",newURL);
 	
-	[[NSPasteboard generalPasteboard] declareTypes:[NSArray arrayWithObject:NSURLPboardType] owner:self];
-	[newURL writeToPasteboard:[NSPasteboard generalPasteboard]];
+	[self writeURL:newURL toPasteboard:[NSPasteboard generalPasteboard]];
 }
 
 @end

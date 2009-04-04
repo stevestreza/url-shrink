@@ -30,6 +30,19 @@
 	return [[self class] name];
 }
 
++(BOOL)canExpandURL:(NSURL *)url{
+	return NO;
+}
+
+-(void)expandURL:(NSURL *)url
+		  target:(id)target
+		  action:(SEL)action{
+	_target = target;
+	_action = action;
+	
+	[NSThread detachNewThreadSelector:@selector(_startExpand:) toTarget:self withObject:url];
+}
+	
 -(void)shrinkURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action{
@@ -47,8 +60,24 @@
 	[pool release];
 }
 
+-(void)_startExpand:(NSURL *)url{
+	NSAutoreleasePool *pool = [NSAutoreleasePool new];
+	
+	[self performExpandOnURL:url];
+	
+	[pool release];
+}
+
 -(void)performShrinkOnURL:(NSURL *)url{
 	[self doneShrinking:nil];
+}
+
+-(void)performExpandOnURL:(NSURL *)url{
+	[self doneExpanding:nil];
+}
+
+-(void)doneExpanding:(NSURL *)url{
+	[_target performSelectorOnMainThread:_action withObject:url waitUntilDone:NO];
 }
 
 -(void)doneShrinking:(NSURL *)url{

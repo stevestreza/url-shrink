@@ -33,6 +33,20 @@ objc_singleton(USShrinkController, sharedShrinkController);
 	return [[[shrinkers allValues] copy] autorelease];
 }
 
+-(void)expandURL:(NSURL *)url 
+		  target:(id)target
+		  action:(SEL)action{
+	for(Class shrinkerClass in [self allShrinkers]){
+		if([shrinkerClass canExpandURL:url]){
+			USURLShrinker *shrinker = [[shrinkerClass alloc] init];
+			[shrinker expandURL:url 
+						 target:target
+						 action:action];
+			break;
+		}
+	}
+}
+
 -(USURLShrinker *)shrinker{
 	Class shrinkerClass = NULL;
 	

@@ -10,7 +10,7 @@
 #import "USURLShrinker.h"
 
 @interface USIsGdShrinker : USURLShrinker {
-
+	NSURL *expandURL;
 }
 
 @end

@@ -10,11 +10,13 @@
 #import "USURLShrinker.h"
 
 @interface USShrinkController : NSObject {
-	USURLShrinker *shrinker;
-	
 	NSMutableDictionary *shrinkers;
 }
 
 +(USShrinkController *)sharedShrinkController;
 -(NSArray *)allShrinkers;
+
+-(void)expandURL:(NSURL *)url 
+		  target:(id)target
+		  action:(SEL)action;
 @end
