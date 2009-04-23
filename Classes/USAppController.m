@@ -89,12 +89,11 @@
 }
 
 -(BOOL)validateURLString:(NSString *)urlString{
-	BOOL isValid = YES;
-	if(![[[urlString substringToIndex:4] lowercaseString] isEqualToString:@"http"]){
-		isValid = NO;
-	}
+	NSAttributedString *tempURLString = [[NSAttributedString alloc] initWithString:urlString];
+	NSURL *URL = [tempURLString URLAtIndex:0 effectiveRange:NULL];
+	[tempURLString release];
 	
-	return isValid;
+	return (URL != nil);
 }
 
 -(void)URLExpanded:(NSURL *)newURL{
