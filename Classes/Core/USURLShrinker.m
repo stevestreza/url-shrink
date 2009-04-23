@@ -13,11 +13,6 @@
 
 @implementation USURLShrinker
 
-+(void)registerShrinker{
-	NSLog(@"Attempting to register %@",[self name]);
-	[[USShrinkController sharedShrinkController] registerShrinkClass:self];	
-}
-
 +(BOOL)requiresAPIKey{
 	return NO;
 }
