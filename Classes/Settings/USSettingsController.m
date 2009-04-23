@@ -11,6 +11,11 @@
 
 #import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
+@interface USSettingsController (Private)
+- (void) setupStatusItem;
++(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window atFrame:(NSRect)hackFrame;
+@end
+
 @implementation USSettingsController
 
 -(id)init{
