@@ -71,7 +71,7 @@ NSInteger ShrinkerSorter(Class shrinker1, Class shrinker2, void* context) {
 	if(!shrinkerClass){
 		NSUInteger index = 0;
 		if(shrinkers.count > 1){
-#define GetRandom(_min,_max) ((rand() % ((_max) - (_min) - 1)) + (_min))
+
 			index = GetRandom(1, [shrinkers count]) - 1;
 		}
 	

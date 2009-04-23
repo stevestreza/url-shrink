@@ -8,8 +8,6 @@
 
 #import "USIncludes.h"
 
-#define kSDShortenURLGLobalShortcutKey @"kSDShortenURLGLobalShortcutKey"
-
 @interface USURLShrinker : NSObject {
 	NSURL *sourceURL;
 	

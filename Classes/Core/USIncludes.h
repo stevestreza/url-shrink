@@ -10,3 +10,6 @@
 - (id)autorelease{return self;}
 
 #define kUSShrinkChoiceDefaultsKey @"Shrinker"
+
+#define kSDShortenURLGLobalShortcutKey @"kSDShortenURLGLobalShortcutKey"
+#define GetRandom(_min,_max) ((rand() % ((_max) - (_min) - 1)) + (_min))
