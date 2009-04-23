@@ -41,6 +41,4 @@ This performs the guts of the shrink. You can schedule asynchronous operations t
 +(NSString *)name;
 Must return a human-readable and unique name for your URL shrinker.
 
-+load{ // just copy this verbatim
-	[self registerShrinker];
-}
+Note: Developers no longer need to implement the +load method in subclasses of the URL Shrinker base-class.

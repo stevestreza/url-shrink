@@ -6,6 +6,23 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B058611C0FA017BA00BB4A33 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B058612C0FA017C400BB4A33 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				B05861200FA017BE00BB4A33 /* PBXTargetDependency */,
+				B05861220FA017BE00BB4A33 /* PBXTargetDependency */,
+				B05861240FA017BE00BB4A33 /* PBXTargetDependency */,
+				B05861260FA017BE00BB4A33 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		1E433D400F8339DD001FC357 /* USURLShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796A870F811D1800D9C477 /* USURLShrinker.h */; };
@@ -74,6 +91,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1E433D3A0F8339CB001FC357;
 			remoteInfo = URLShrink;
+		};
+		B058611F0FA017BE00BB4A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = "URL Shrink";
+		};
+		B05861210FA017BE00BB4A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA796D7D0F81546300D9C477;
+			remoteInfo = shrink;
+		};
+		B05861230FA017BE00BB4A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E433D3A0F8339CB001FC357;
+			remoteInfo = URLShrink.framework;
+		};
+		B05861250FA017BE00BB4A33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E433D970F833B0A001FC357;
+			remoteInfo = libURLShrink.a;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -180,12 +225,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AA796A8A0F811D2900D9C477 /* USAppController.h */,
+				AA796A8B0F811D2900D9C477 /* USAppController.m */,
 				1EC4B9680F872AAA00E91EEC /* Core */,
 				1EC4BAF10F87423B00E91EEC /* SSCore */,
 				1EC4B9660F872A9700E91EEC /* Handlers */,
 				1E8D95890F818B8A00C77274 /* Settings */,
-				AA796A8A0F811D2900D9C477 /* USAppController.h */,
-				AA796A8B0F811D2900D9C477 /* USAppController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -488,6 +533,7 @@
 				AA796D7D0F81546300D9C477 /* shrink */,
 				1E433D3A0F8339CB001FC357 /* URLShrink.framework */,
 				1E433D970F833B0A001FC357 /* libURLShrink.a */,
+				B058611C0FA017BA00BB4A33 /* All */,
 			);
 		};
 /* End PBXProject section */
@@ -575,6 +621,26 @@
 			isa = PBXTargetDependency;
 			target = 1E433D3A0F8339CB001FC357 /* URLShrink.framework */;
 			targetProxy = 1E433D520F833A38001FC357 /* PBXContainerItemProxy */;
+		};
+		B05861200FA017BE00BB4A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* URL Shrink */;
+			targetProxy = B058611F0FA017BE00BB4A33 /* PBXContainerItemProxy */;
+		};
+		B05861220FA017BE00BB4A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA796D7D0F81546300D9C477 /* shrink */;
+			targetProxy = B05861210FA017BE00BB4A33 /* PBXContainerItemProxy */;
+		};
+		B05861240FA017BE00BB4A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E433D3A0F8339CB001FC357 /* URLShrink.framework */;
+			targetProxy = B05861230FA017BE00BB4A33 /* PBXContainerItemProxy */;
+		};
+		B05861260FA017BE00BB4A33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E433D970F833B0A001FC357 /* libURLShrink.a */;
+			targetProxy = B05861250FA017BE00BB4A33 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -739,6 +805,27 @@
 			};
 			name = Release;
 		};
+		B058611D0FA017BA00BB4A33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		B058611E0FA017BA00BB4A33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = All;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -830,6 +917,15 @@
 			buildConfigurations = (
 				AA796D800F81546400D9C477 /* Debug */,
 				AA796D810F81546400D9C477 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B058612C0FA017C400BB4A33 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B058611D0FA017BA00BB4A33 /* Debug */,
+				B058611E0FA017BA00BB4A33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
