@@ -61,6 +61,10 @@
 		AA796FA30F815B7700D9C477 /* USLoopbackShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */; };
 		AA796FA40F815B7700D9C477 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
 		AA796FA50F815B7700D9C477 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
+		B0585F960F9FFF4800BB4A33 /* SDGlobalShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */; };
+		B0585F970F9FFF4800BB4A33 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */; };
+		B0585FB00FA000CB00BB4A33 /* SDGlobalShortcuts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */; };
+		B0585FB10FA000CB00BB4A33 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B0585FB00FA000CB00BB4A33 /* SDGlobalShortcuts.framework in CopyFiles */,
+				B0585FB10FA000CB00BB4A33 /* ShortcutRecorder.framework in CopyFiles */,
 				1E433D560F833A51001FC357 /* URLShrink.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +134,8 @@
 		AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USLoopbackShrinker.m; sourceTree = "<group>"; };
 		AA796D7E0F81546300D9C477 /* shrink */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = shrink; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA796F980F81550D00D9C477 /* tool_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool_main.m; sourceTree = "<group>"; };
+		B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDGlobalShortcuts.framework; path = Frameworks/SDGlobalShortcuts.framework; sourceTree = "<group>"; };
+		B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,8 @@
 				1E433D5D0F833A58001FC357 /* URLShrink.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				AA796A8E0F811D6000D9C477 /* Carbon.framework in Frameworks */,
+				B0585F960F9FFF4800BB4A33 /* SDGlobalShortcuts.framework in Frameworks */,
+				B0585F970F9FFF4800BB4A33 /* ShortcutRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +204,8 @@
 		1E433DAA0F833B45001FC357 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */,
+				B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -315,8 +327,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				1E8D958D0F818C3700C77274 /* Settings.xib */,
-				1E433D3C0F8339CB001FC357 /* URLShrink-Info.plist */,
 			);
 			name = "URL Shrink";
 			sourceTree = "<group>";
@@ -334,6 +344,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1E433D3C0F8339CB001FC357 /* URLShrink-Info.plist */,
+				1E8D958D0F818C3700C77274 /* Settings.xib */,
 				1E8D98B20F81E6E600C77274 /* clipboard.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -732,6 +744,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -749,6 +765,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shrink_Prefix.pch";
