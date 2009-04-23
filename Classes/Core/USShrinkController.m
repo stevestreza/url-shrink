@@ -31,13 +31,27 @@ objc_singleton(USShrinkController, sharedShrinkController);
 	return array;
 }
 
+NSInteger ShrinkerSorter(Class shrinker1, Class shrinker2, void* context) {
+	return ([[shrinker1 name] caseInsensitiveCompare:[shrinker2 name]]);
+}
+
 -(NSArray *)allShrinkers{
 	int count = objc_getClassList(NULL, 0);
 	
 	Class classes[count];
 	objc_getClassList(classes, count);
 	
-	return [self subclassesOfClass:[USURLShrinker class] fromCArray:classes withCount:count];
+	NSArray *shrinkers = [self subclassesOfClass:[USURLShrinker class] fromCArray:classes withCount:count];
+	shrinkers = [shrinkers sortedArrayUsingFunction:ShrinkerSorter context:NULL];
+	return shrinkers;
+}
+
+- (Class) shrinkerForName:(NSString*)shrinkerName {
+	for (Class shrinkerClass in [self allShrinkers]) {
+		if ([[shrinkerClass name] isEqualToString:shrinkerName])
+			return shrinkerClass;
+	}
+	return nil;
 }
 
 -(USURLShrinker *)shrinker{
@@ -47,21 +61,20 @@ objc_singleton(USShrinkController, sharedShrinkController);
 	
 	//get the user's preferred class
 	NSString *defaultsValue = [[NSUserDefaults standardUserDefaults] stringForKey:kUSShrinkChoiceDefaultsKey];
-	if(defaultsValue && [shrinkers objectForKey:defaultsValue]){
+	if(defaultsValue && [shrinkers containsObject:NSClassFromString(defaultsValue)]){
 		NSLog(@"Found user default: %@",defaultsValue);
-		shrinkerClass = [shrinkers objectForKey:defaultsValue];
+		shrinkerClass = [self shrinkerForName:defaultsValue];
 	}
 	
 	//if there is none, grab one at random
 	if(!shrinkerClass){
-		NSArray *keys = [shrinkers allKeys];
 		NSUInteger index = 0;
-		if(keys.count > 1){
+		if(shrinkers.count > 1){
 #define GetRandom(_min,_max) ((rand() % ((_max) - (_min) - 1)) + (_min))
-			index = GetRandom(1, [keys count]) - 1;
+			index = GetRandom(1, [shrinkers count]) - 1;
 		}
 	
-		shrinkerClass = [shrinkers objectForKey:[keys objectAtIndex:index]];
+		shrinkerClass = [shrinkers objectAtIndex:index];
 	}
 
 	//if it exists, make one
