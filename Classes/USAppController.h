@@ -7,7 +7,6 @@
 //
 
 #import "USIncludes.h"
-#import <Carbon/Carbon.h>
 #import "USURLShrinker.h"
 
 @interface USAppController : NSObject {
