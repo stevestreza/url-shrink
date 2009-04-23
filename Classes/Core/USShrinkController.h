@@ -10,7 +10,6 @@
 #import "USURLShrinker.h"
 
 @interface USShrinkController : NSObject {
-	USURLShrinker *shrinker;
 }
 
 +(USShrinkController *)sharedShrinkController;
