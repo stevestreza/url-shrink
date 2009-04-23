@@ -23,26 +23,29 @@
 	[settings showWindow:self];
 }
 
++ (NSString*) sanitizeString:(NSString*)oldString {
+	NSString *newString = (oldString);
+	return (newString != nil ? newString : oldString);
+}
+
 +(NSString *)sanitizeURLString:(NSString *)urlString{
-	if(!urlString) return;
+	if (urlString == nil)
+		return nil;
 	
-	NSString *newString = nil;
-
-#define SanitizeString(__fn) do{newString=(__fn); if(newString){ urlString = newString; }}while(0)
-
-	SanitizeString([urlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]);
+	urlString = [self sanitizeString:[urlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
 	
 	//sanitize the URL string before handing it off to NSURL
 	//from Dan Wood, http://stackoverflow.com/questions/192944/whats-the-best-way-to-validate-a-user-entered-url-in-a-cocoa-application
 	
-	SanitizeString(NSMakeCollectable(CFURLCreateStringByAddingPercentEscapes(NULL,
-																		  (CFStringRef)urlString,
-																		  (CFStringRef)@"%+#",	// Characters to leave unescaped
-																		  NULL,
-																		  kCFStringEncodingUTF8)));
-
+	CFStringRef tempURLString = CFURLCreateStringByAddingPercentEscapes(NULL,
+																		(CFStringRef)urlString,
+																		(CFStringRef)@"%+#",	// Characters to leave unescaped
+																		NULL,
+																		kCFStringEncodingUTF8);
+	
+	urlString = [self sanitizeString:[NSMakeCollectable(tempURLString) autorelease]];
+	
 	return urlString;
-#undef SanitizeString
 }
 
 //-(void)shrinkURL:(id)something{
