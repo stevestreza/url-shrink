@@ -11,10 +11,6 @@
 
 @implementation USLoopbackShrinker
 
-+(void)load{
-	[self registerShrinker];
-}
-
 +(NSString *)name{
 	return @"Loopback";
 }

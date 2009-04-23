@@ -12,10 +12,6 @@
 
 @implementation USTinyurlShrinker
 
-+(void)load {
-	[self registerShrinker];
-}
-
 +(NSString *)name{
 	return @"TinyURL";
 }

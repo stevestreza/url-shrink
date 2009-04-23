@@ -11,10 +11,6 @@
 
 @implementation USDiggShrinker
 
-+(void)load {
-	[self registerShrinker];
-}
-
 +(NSString *)name{
 	return @"Digg";
 }

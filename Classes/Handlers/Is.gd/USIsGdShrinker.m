@@ -12,10 +12,6 @@
 
 @implementation USIsGdShrinker
 
-+(void)load {
-	[self registerShrinker];
-}
-
 +(NSString *)name{
 	return @"is.gd";
 }

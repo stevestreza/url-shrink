@@ -11,10 +11,6 @@
 
 @implementation USTrImShrinker
 
-+(void)load {
-	[self registerShrinker];
-}
-
 +(NSString *)name{
 	return @"tr.im";
 }

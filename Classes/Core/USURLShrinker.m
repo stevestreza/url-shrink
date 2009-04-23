@@ -13,10 +13,6 @@
 
 @implementation USURLShrinker
 
-+(void)load {
-	[self registerShrinker];
-}
-
 +(void)registerShrinker{
 	NSLog(@"Attempting to register %@",[self name]);
 	[[USShrinkController sharedShrinkController] registerShrinkClass:self];	

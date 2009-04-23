@@ -11,8 +11,6 @@
 
 @interface USShrinkController : NSObject {
 	USURLShrinker *shrinker;
-	
-	NSMutableDictionary *shrinkers;
 }
 
 +(USShrinkController *)sharedShrinkController;
