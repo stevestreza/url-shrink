@@ -170,6 +170,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1EC4B9680F872AAA00E91EEC /* Core */,
 				1EC4BAF10F87423B00E91EEC /* SSCore */,
 				1EC4B9660F872A9700E91EEC /* Handlers */,
 				1E8D95890F818B8A00C77274 /* Settings */,
@@ -226,7 +227,7 @@
 				AA796D3A0F8144E200D9C477 /* USLoopbackShrinker.h */,
 				AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */,
 			);
-			name = Loopback;
+			path = Loopback;
 			sourceTree = "<group>";
 		};
 		1EC4B9660F872A9700E91EEC /* Handlers */ = {
@@ -235,22 +236,20 @@
 				1EC4BB6E0F87D80C00E91EEC /* Bit.ly */,
 				1EC4BB6D0F87D7FF00E91EEC /* Tr.im */,
 				1EC4BA060F87371B00E91EEC /* Digg */,
-				1EC4B9680F872AAA00E91EEC /* Core */,
 				1EC4B9690F872ABC00E91EEC /* Tinyurl */,
-				1EC4B9670F872AA200E91EEC /* is.gd */,
+				1EC4B9670F872AA200E91EEC /* Is.gd */,
 				1EC4B9650F872A8F00E91EEC /* Loopback */,
 			);
-			name = Handlers;
-			path = Core;
+			path = Handlers;
 			sourceTree = "<group>";
 		};
-		1EC4B9670F872AA200E91EEC /* is.gd */ = {
+		1EC4B9670F872AA200E91EEC /* Is.gd */ = {
 			isa = PBXGroup;
 			children = (
 				AA796C850F813BB100D9C477 /* USIsGdShrinker.h */,
 				AA796C860F813BB100D9C477 /* USIsGdShrinker.m */,
 			);
-			name = is.gd;
+			path = Is.gd;
 			sourceTree = "<group>";
 		};
 		1EC4B9680F872AAA00E91EEC /* Core */ = {
@@ -262,7 +261,7 @@
 				AA796C3A0F8130EE00D9C477 /* USShrinkController.h */,
 				AA796C3B0F8130EE00D9C477 /* USShrinkController.m */,
 			);
-			name = Core;
+			path = Core;
 			sourceTree = "<group>";
 		};
 		1EC4B9690F872ABC00E91EEC /* Tinyurl */ = {
@@ -271,7 +270,7 @@
 				1E8D94E00F81808200C77274 /* USTinyurlShrinker.h */,
 				1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */,
 			);
-			name = Tinyurl;
+			path = Tinyurl;
 			sourceTree = "<group>";
 		};
 		1EC4BA060F87371B00E91EEC /* Digg */ = {
@@ -280,7 +279,7 @@
 				1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */,
 				1EC4BA100F87373600E91EEC /* USDiggShrinker.m */,
 			);
-			name = Digg;
+			path = Digg;
 			sourceTree = "<group>";
 		};
 		1EC4BAF10F87423B00E91EEC /* SSCore */ = {
@@ -298,14 +297,14 @@
 				1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */,
 				1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */,
 			);
-			name = Tr.im;
+			path = Tr.im;
 			sourceTree = "<group>";
 		};
 		1EC4BB6E0F87D80C00E91EEC /* Bit.ly */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Bit.ly;
+			path = Bit.ly;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* URL Shrink */ = {
