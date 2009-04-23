@@ -61,7 +61,8 @@ NSInteger ShrinkerSorter(Class shrinker1, Class shrinker2, void* context) {
 	
 	//get the user's preferred class
 	NSString *defaultsValue = [[NSUserDefaults standardUserDefaults] stringForKey:kUSShrinkChoiceDefaultsKey];
-	if(defaultsValue && [shrinkers containsObject:NSClassFromString(defaultsValue)]){
+	shrinkerClass = [self shrinkerForName:defaultsValue];
+	if (shrinkerClass){
 		NSLog(@"Found user default: %@",defaultsValue);
 		shrinkerClass = [self shrinkerForName:defaultsValue];
 	}
