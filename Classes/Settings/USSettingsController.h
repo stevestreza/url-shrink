@@ -9,8 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import "USShrinkController.h"
 
+#import <ShortcutRecorder/ShortcutRecorder.h>
+
 @interface USSettingsController : NSWindowController {
-	IBOutlet NSStatusItem *statusItem;
+	NSStatusItem *statusItem;
+	NSWindow *statusItemWindow;
+	IBOutlet SRRecorderControl *recorderControl;
 }
 
 +(USSettingsController *)sharedSettings;

@@ -9,16 +9,7 @@
 #import "USSettingsController.h"
 #import "MAAttachedWindow.h"
 
-@interface NSStatusItem (hack)
-- (NSRect)hackFrame;
-@end
-
-@implementation NSStatusItem (hack)
-- (NSRect)hackFrame
-{
-	return [_fWindow frame];
-}
-@end
+#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
 @implementation USSettingsController
 
@@ -28,13 +19,22 @@ objc_singleton(USSettingsController, sharedSettings)
 	if(self = [super initWithWindowNibName:@"Settings"]){
 		[self setupStatusItem];
 		[self setWindow:[USSettingsController bubbleWindowForWindow:[self window]
-														 statusItem:statusItem]];
+															atFrame:[statusItemWindow frame]]];
 	}
 	return self;
 }
 
+- (void) awakeFromNib {
+	[[SDGlobalShortcutsController sharedShortcutsController] attachControl:recorderControl
+															 toDefaultsKey:kSDShortenURLGLobalShortcutKey];
+}
+
 -(void)setupStatusItem{
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
+	
+	[statusItem setView:[[[NSView alloc] init] autorelease]];
+	statusItemWindow = [[statusItem view] window];
+	[statusItem setView:nil];
 	
 	NSImage *clipboardImage = [NSImage imageNamed:@"clipboard"];
 	[statusItem setImage:clipboardImage];
@@ -53,8 +53,9 @@ objc_singleton(USSettingsController, sharedSettings)
 	}
 }
 
-+(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window statusItem:(NSStatusItem *)aStatusItem{
-	NSRect hackFrame = [aStatusItem hackFrame];
++(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window atFrame:(NSRect)hackFrame {
+//	NSDisableScreenUpdates();
+//	NSEnableScreenUpdates();
 	NSPoint centerPoint = NSMakePoint(hackFrame.origin.x + (hackFrame.size.width/2.), 
 									  hackFrame.origin.y - (hackFrame.size.height*3/4.));
 	

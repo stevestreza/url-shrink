@@ -10,35 +10,17 @@
 #import "USShrinkController.h"
 #import "USSettingsController.h"
 
-OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, EventRef anEvent, void *userData){
-	USAppController *self = (USAppController *)userData;
-	[self handleHotKeyEvent:anEvent];
-    return noErr;	
-}
+#import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
 @implementation USAppController
 
 -(void)awakeFromNib{
+	[[SDGlobalShortcutsController sharedShortcutsController] addShortcutFromDefaultsKey:kSDShortenURLGLobalShortcutKey
+																				 target:self
+																			   selector:@selector(handleHotKeyEvent:)];
+	
 	USSettingsController *settings = [USSettingsController sharedSettings];
 	[settings showWindow:self];
-	
-	[self setupKeyboardHandlers];
-}
-
--(void)setupKeyboardHandlers{
-	EventHotKeyRef myHotKeyRef;
-    EventHotKeyID myHotKeyID;
-    EventTypeSpec eventType;
-	
-	eventType.eventClass=kEventClassKeyboard;
-    eventType.eventKind=kEventHotKeyPressed;
-	
-	InstallApplicationEventHandler(&USAppController_handleHotKeyPress,1,&eventType,(void*)self,NULL);
-	
-	myHotKeyID.signature='mhk1';
-    myHotKeyID.id=1;
-	
-	RegisterEventHotKey(49, shiftKey+optionKey, myHotKeyID, GetApplicationEventTarget(), 0, &myHotKeyRef);
 }
 
 +(NSString *)sanitizeURLString:(NSString *)urlString{
@@ -64,7 +46,7 @@ OSStatus USAppController_handleHotKeyPress(EventHandlerCallRef nextHandler, Even
 }
 
 //-(void)shrinkURL:(id)something{
--(void)handleHotKeyEvent:(EventRef)ev{
+-(void)handleHotKeyEvent:(id)sender {
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
 	NSArray *types = [pboard types];
 
