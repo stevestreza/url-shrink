@@ -17,7 +17,6 @@
 	IBOutlet SRRecorderControl *recorderControl;
 }
 
-+(USSettingsController *)sharedSettings;
 -(USShrinkController *)shrinkController;
 
 @end

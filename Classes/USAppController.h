@@ -9,7 +9,10 @@
 #import "USIncludes.h"
 #import "USURLShrinker.h"
 
+#import "USSettingsController.h"
+
 @interface USAppController : NSObject {
+	USSettingsController *settings;
 }
 
 //-(void)shrinkURL:(EventRef)ev;

@@ -19,7 +19,7 @@
 																				 target:self
 																			   selector:@selector(handleHotKeyEvent:)];
 	
-	USSettingsController *settings = [USSettingsController sharedSettings];
+	settings = [[USSettingsController alloc] init];
 	[settings showWindow:self];
 }
 

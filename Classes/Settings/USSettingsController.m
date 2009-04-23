@@ -13,8 +13,6 @@
 
 @implementation USSettingsController
 
-objc_singleton(USSettingsController, sharedSettings)
-
 -(id)init{
 	if(self = [super initWithWindowNibName:@"Settings"]){
 		[self setupStatusItem];
