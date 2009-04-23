@@ -31,7 +31,6 @@
 
 #pragma mark Internals
 
-+(void)registerShrinker;
 -(NSString *)name;
 
 -(void)shrinkURL:(NSURL *)url
