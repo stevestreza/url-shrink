@@ -9,6 +9,9 @@
 #import "USDiggShrinker.h"
 #import "TCDownload.h"
 
+#define kUSDiggShrinkerAPIEndpoint @"http://services.digg.com/url/short/create?url=%@"
+#define kUSDiggShrinkerAppKey @"http://github.com/amazingsyco/url-shrink"
+
 @implementation USDiggShrinker
 
 +(NSString *)name{
@@ -16,8 +19,12 @@
 }
 
 -(void)performShrinkOnURL:(NSURL *)url{
-	NSString *newURLString = [NSString stringWithFormat:@"http://services.digg.com/url/short/create?url=%@",[[url absoluteString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-	NSURL *newURL = [NSURL URLWithString:newURLString];
+    
+	NSString *s = [NSString stringWithFormat:kUSDiggShrinkerAPIEndpoint,
+                   [[url absoluteString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+                   ];
+    
+	NSURL *newURL = [NSURL URLWithString:s];
 	
 	NSData *data = [TCDownload loadResourceDataForURL:newURL];
 	
@@ -29,7 +36,7 @@
 		return;
 	}
 	
-	NSXMLElement *shorturl = [[xml rootElement] childAtIndex:0];
+	NSXMLElement *shorturl = (NSXMLElement*)[[xml rootElement] childAtIndex:0];
 	
 	NSString *tinyURLString = [[shorturl attributeForName:@"short_url"] stringValue];
 	NSURL *tinyURL = [NSURL URLWithString:tinyURLString];
