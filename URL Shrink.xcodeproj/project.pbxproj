@@ -54,7 +54,6 @@
 		1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D958B0F818BD600C77274 /* USSettingsController.m */; };
 		1E8D958F0F818C3700C77274 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D958D0F818C3700C77274 /* Settings.xib */; };
 		1E8D987E0F81DEFA00C77274 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */; };
-		1E8D98B30F81E6E600C77274 /* clipboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D98B20F81E6E600C77274 /* clipboard.png */; };
 		1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */; };
 		1EC4BA120F87373600E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BA100F87373600E91EEC /* USDiggShrinker.m */; };
 		1EC4BA130F87373600E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */; };
@@ -67,6 +66,8 @@
 		1EC4BB7C0F87D8C400E91EEC /* USTrImShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */; };
 		1EC4BB7D0F87D8C400E91EEC /* USTrImShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */; };
 		1EC4BB7E0F87D8C400E91EEC /* USTrImShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */; };
+		8027E3950FA0F2B900AF3D97 /* USIdekShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */; };
+		80EEDC7B0FA2284000417384 /* menubar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EEDC7A0FA2284000417384 /* menubar-icon.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -152,7 +153,6 @@
 		1E8D958E0F818C3700C77274 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Settings.xib; sourceTree = "<group>"; };
 		1E8D987C0F81DEFA00C77274 /* MAAttachedWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAAttachedWindow.h; sourceTree = "<group>"; };
 		1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
-		1E8D98B20F81E6E600C77274 /* clipboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipboard.png; sourceTree = "<group>"; };
 		1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USDiggShrinker.h; sourceTree = "<group>"; };
 		1EC4BA100F87373600E91EEC /* USDiggShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USDiggShrinker.m; sourceTree = "<group>"; };
 		1EC4BB1B0F87423B00E91EEC /* TCDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDownload.h; sourceTree = "<group>"; };
@@ -163,8 +163,11 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* URL Shrink_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "URL Shrink_Prefix.pch"; sourceTree = "<group>"; };
+		8027E3930FA0F2B900AF3D97 /* USIdekShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USIdekShrinker.h; sourceTree = "<group>"; };
+		8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USIdekShrinker.m; sourceTree = "<group>"; };
+		80EEDC7A0FA2284000417384 /* menubar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-icon.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* URL Shrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URL Shrink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1107320486CEB800E47090 /* Shrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA796A870F811D1800D9C477 /* USURLShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USURLShrinker.h; sourceTree = "<group>"; };
 		AA796A880F811D1800D9C477 /* USURLShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USURLShrinker.m; sourceTree = "<group>"; };
 		AA796A8A0F811D2900D9C477 /* USAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAppController.h; sourceTree = "<group>"; };
@@ -238,7 +241,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* URL Shrink.app */,
+				8D1107320486CEB800E47090 /* Shrink.app */,
 				AA796D7E0F81546300D9C477 /* shrink */,
 				1E433D3B0F8339CB001FC357 /* URLShrink.framework */,
 				1E433D980F833B0A001FC357 /* libURLShrink.a */,
@@ -290,6 +293,8 @@
 		1EC4B9660F872A9700E91EEC /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				8027E3910FA0F24900AF3D97 /* Idek */,
+				8027E37B0FA0F1FE00AF3D97 /* Cli.gs */,
 				1EC4BB6E0F87D80C00E91EEC /* Bit.ly */,
 				1EC4BB6D0F87D7FF00E91EEC /* Tr.im */,
 				1EC4BA060F87371B00E91EEC /* Digg */,
@@ -391,10 +396,10 @@
 			children = (
 				1E433D3C0F8339CB001FC357 /* URLShrink-Info.plist */,
 				1E8D958D0F818C3700C77274 /* Settings.xib */,
-				1E8D98B20F81E6E600C77274 /* clipboard.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				80EEDC7A0FA2284000417384 /* menubar-icon.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -406,6 +411,22 @@
 				1E433DAA0F833B45001FC357 /* Mac */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8027E37B0FA0F1FE00AF3D97 /* Cli.gs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cli.gs;
+			sourceTree = "<group>";
+		};
+		8027E3910FA0F24900AF3D97 /* Idek */ = {
+			isa = PBXGroup;
+			children = (
+				8027E3930FA0F2B900AF3D97 /* USIdekShrinker.h */,
+				8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */,
+			);
+			name = Idek;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,9 +502,9 @@
 			productReference = 1E433D980F833B0A001FC357 /* libURLShrink.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8D1107260486CEB800E47090 /* URL Shrink */ = {
+		8D1107260486CEB800E47090 /* Shrink */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "URL Shrink" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Shrink" */;
 			buildPhases = (
 				1E433D7A0F833A7A001FC357 /* CopyFiles */,
 				8D1107290486CEB800E47090 /* Resources */,
@@ -495,10 +516,10 @@
 			dependencies = (
 				1E433D530F833A38001FC357 /* PBXTargetDependency */,
 			);
-			name = "URL Shrink";
+			name = Shrink;
 			productInstallPath = "$(HOME)/Applications";
 			productName = "URL Shrink";
-			productReference = 8D1107320486CEB800E47090 /* URL Shrink.app */;
+			productReference = 8D1107320486CEB800E47090 /* Shrink.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AA796D7D0F81546300D9C477 /* shrink */ = {
@@ -529,7 +550,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* URL Shrink */,
+				8D1107260486CEB800E47090 /* Shrink */,
 				AA796D7D0F81546300D9C477 /* shrink */,
 				1E433D3A0F8339CB001FC357 /* URLShrink.framework */,
 				1E433D970F833B0A001FC357 /* libURLShrink.a */,
@@ -553,7 +574,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				1E8D958F0F818C3700C77274 /* Settings.xib in Resources */,
-				1E8D98B30F81E6E600C77274 /* clipboard.png in Resources */,
+				80EEDC7B0FA2284000417384 /* menubar-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +619,7 @@
 				AA796A8C0F811D2900D9C477 /* USAppController.m in Sources */,
 				1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */,
 				1E8D987E0F81DEFA00C77274 /* MAAttachedWindow.m in Sources */,
+				8027E3950FA0F2B900AF3D97 /* USIdekShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +646,7 @@
 		};
 		B05861200FA017BE00BB4A33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D1107260486CEB800E47090 /* URL Shrink */;
+			target = 8D1107260486CEB800E47090 /* Shrink */;
 			targetProxy = B058611F0FA017BE00BB4A33 /* PBXContainerItemProxy */;
 		};
 		B05861220FA017BE00BB4A33 /* PBXTargetDependency */ = {
@@ -843,7 +865,7 @@
 				GCC_PREFIX_HEADER = "URL Shrink_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "URL Shrink";
+				PRODUCT_NAME = Shrink;
 			};
 			name = Debug;
 		};
@@ -861,7 +883,7 @@
 				GCC_PREFIX_HEADER = "URL Shrink_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				PRODUCT_NAME = "URL Shrink";
+				PRODUCT_NAME = Shrink;
 			};
 			name = Release;
 		};
@@ -930,7 +952,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "URL Shrink" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Shrink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,

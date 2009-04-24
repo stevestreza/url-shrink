@@ -39,8 +39,8 @@
 	statusItemWindow = [[statusItem view] window];
 	[statusItem setView:nil];
 	
-	NSImage *clipboardImage = [NSImage imageNamed:@"clipboard"];
-	[statusItem setImage:clipboardImage];
+	NSImage *menuBarIcon = [NSImage imageNamed:@"menubar-icon"];
+	[statusItem setImage:menuBarIcon];
 	
 	[statusItem setHighlightMode:YES];
 	
