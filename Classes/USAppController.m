@@ -12,6 +12,11 @@
 
 #import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
+@interface USAppController (Private)
+-(void)writeURL:(NSURL *)url toPasteboard:(NSPasteboard *)pboard;
+@end
+
+
 @implementation USAppController
 
 -(void)awakeFromNib{

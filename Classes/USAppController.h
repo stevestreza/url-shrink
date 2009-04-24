@@ -15,7 +15,6 @@
 	USSettingsController *settings;
 }
 
-//-(void)shrinkURL:(EventRef)ev;
--(void)shrinkURL:(id)something;
 -(BOOL)validateURLString:(NSString *)urlString;
+
 @end
