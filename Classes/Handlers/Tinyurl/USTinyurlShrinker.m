@@ -9,6 +9,10 @@
 #import "USTinyurlShrinker.h"
 #import "TCDownload.h"
 
+@interface USTinyurlShrinker (Private) <TCDownloadDelegate>
+
+@end
+
 
 @implementation USTinyurlShrinker
 
@@ -38,6 +42,10 @@
 	[download setDelegate:self];
 	[download send];
 }
+
+@end
+
+@implementation USTinyurlShrinker (Private)
 
 -(BOOL)download:(TCDownload *)download shouldRedirectToURL:(NSURL *)url{
 	if([url isEqual:sourceURL]) return YES;

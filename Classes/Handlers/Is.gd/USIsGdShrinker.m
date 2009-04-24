@@ -9,8 +9,12 @@
 #import "USIsGdShrinker.h"
 #import "TCDownload.h"
 
+@interface USIsGdShrinker (Private) <TCDownloadDelegate>
+@end
 
-@implementation USIsGdShrinker
+
+
+@implementation USIsGdShrinker 
 
 +(NSString *)name{
 	return @"is.gd";
@@ -38,6 +42,11 @@
 	[download setDelegate:self];
 	[download send];
 }
+
+
+@end
+
+@implementation USIsGdShrinker (Private)
 
 -(BOOL)download:(TCDownload *)download shouldRedirectToURL:(NSURL *)url{
 	if([url isEqual:sourceURL]) return YES;
