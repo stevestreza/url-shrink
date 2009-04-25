@@ -50,6 +50,7 @@
 		1E433DA60F833B39001FC357 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E433DA70F833B39001FC357 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
 		1E433DA80F833B39001FC357 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
+		1E57DCF10FA3A1F70039E1F5 /* USURLRedirectShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E57DCEF0FA3A1F70039E1F5 /* USURLRedirectShrinker.h */; };
 		1E8D94E30F81808200C77274 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D958B0F818BD600C77274 /* USSettingsController.m */; };
 		1E8D958F0F818C3700C77274 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D958D0F818C3700C77274 /* Settings.xib */; };
@@ -61,7 +62,6 @@
 		1EC4BB1D0F87423B00E91EEC /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB1B0F87423B00E91EEC /* TCDownload.h */; };
 		1EC4BB1E0F87423B00E91EEC /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB1C0F87423B00E91EEC /* TCDownload.m */; };
 		1EC4BB380F87423B00E91EEC /* TCDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB1B0F87423B00E91EEC /* TCDownload.h */; };
-		1EC4BB390F87423B00E91EEC /* TCDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB1C0F87423B00E91EEC /* TCDownload.m */; };
 		1EC4BB7B0F87D8C400E91EEC /* USTrImShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */; };
 		1EC4BB7C0F87D8C400E91EEC /* USTrImShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */; };
 		1EC4BB7D0F87D8C400E91EEC /* USTrImShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */; };
@@ -146,6 +146,8 @@
 		1E433D3B0F8339CB001FC357 /* URLShrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URLShrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E433D3C0F8339CB001FC357 /* URLShrink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "URLShrink-Info.plist"; sourceTree = "<group>"; };
 		1E433D980F833B0A001FC357 /* libURLShrink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libURLShrink.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E57DCEF0FA3A1F70039E1F5 /* USURLRedirectShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USURLRedirectShrinker.h; sourceTree = "<group>"; };
+		1E57DCF00FA3A1F70039E1F5 /* USURLRedirectShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USURLRedirectShrinker.m; sourceTree = "<group>"; };
 		1E8D94E00F81808200C77274 /* USTinyurlShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTinyurlShrinker.h; sourceTree = "<group>"; };
 		1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTinyurlShrinker.m; sourceTree = "<group>"; };
 		1E8D958A0F818BD600C77274 /* USSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USSettingsController.h; sourceTree = "<group>"; };
@@ -322,6 +324,8 @@
 				AA796A880F811D1800D9C477 /* USURLShrinker.m */,
 				AA796C3A0F8130EE00D9C477 /* USShrinkController.h */,
 				AA796C3B0F8130EE00D9C477 /* USShrinkController.m */,
+				1E57DCEF0FA3A1F70039E1F5 /* USURLRedirectShrinker.h */,
+				1E57DCF00FA3A1F70039E1F5 /* USURLRedirectShrinker.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -445,6 +449,7 @@
 				1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */,
 				1EC4BB380F87423B00E91EEC /* TCDownload.h in Headers */,
 				1EC4BB7B0F87D8C400E91EEC /* USTrImShrinker.h in Headers */,
+				1E57DCF10FA3A1F70039E1F5 /* USURLRedirectShrinker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,7 +596,6 @@
 				1E433D4A0F8339DD001FC357 /* USLoopbackShrinker.m in Sources */,
 				1E433D4C0F8339DD001FC357 /* USTinyurlShrinker.m in Sources */,
 				1EC4BA120F87373600E91EEC /* USDiggShrinker.m in Sources */,
-				1EC4BB390F87423B00E91EEC /* TCDownload.m in Sources */,
 				1EC4BB7C0F87D8C400E91EEC /* USTrImShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

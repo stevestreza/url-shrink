@@ -7,9 +7,8 @@
 //
 
 #import "USTinyurlShrinker.h"
-#import "TCDownload.h"
 
-@interface USTinyurlShrinker (Private) <TCDownloadDelegate>
+@interface USTinyurlShrinker (Private)
 
 @end
 
@@ -24,12 +23,14 @@
 	NSString *newURLString = [NSString stringWithFormat:@"http://tinyurl.com/api-create.php?url=%@",[url absoluteString]];
 	NSURL *newURL = [NSURL URLWithString:newURLString];
 	
-	NSData *data = [TCDownload loadResourceDataForURL:newURL];
-	NSString *tinyURLString = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	NSError *err = nil;
+	NSString *tinyURLString = [NSString stringWithContentsOfURL:newURL encoding:NSUTF8StringEncoding error:&err];
+	if(!tinyURLString || err){
+		[self doneShrinking:url];
+		return;
+	}
+	
 	NSURL *tinyURL = [NSURL URLWithString:tinyURLString];
-	
-	NSLog(@"tiny! %@",tinyURL);
-	
 	[self doneShrinking:tinyURL];	
 }
 
@@ -38,20 +39,25 @@
 }
 
 -(void)performExpandOnURL:(NSURL *)url{
-	TCDownload *download = [[TCDownload alloc] initWithURL:url];
-	[download setDelegate:self];
-	[download send];
+	NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:url] delegate:self startImmediately:NO];
+	[conn scheduleInRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+	[conn performSelectorOnMainThread:@selector(start) withObject:nil waitUntilDone:NO];
 }
 
 @end
 
 @implementation USTinyurlShrinker (Private)
 
--(BOOL)download:(TCDownload *)download shouldRedirectToURL:(NSURL *)url{
-	if([url isEqual:sourceURL]) return YES;
+-(NSURLRequest *)connection:(NSURLConnection *)connection
+            willSendRequest:(NSURLRequest *)request
+           redirectResponse:(NSURLResponse *)redirectResponse{
+	NSURL *url = [request URL];
+	if([url isEqual:sourceURL]) return request;
 	
 	[self doneExpanding:url];
-	return NO;
+	[connection cancel];
+	[connection release];
+	return nil;
 }
 
 @end
