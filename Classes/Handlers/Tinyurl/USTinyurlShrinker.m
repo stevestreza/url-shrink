@@ -9,7 +9,9 @@
 #import "USTinyurlShrinker.h"
 
 @interface USTinyurlShrinker (Private)
-
+-(NSURLRequest *)connection:(NSURLConnection *)connection
+            willSendRequest:(NSURLRequest *)request
+           redirectResponse:(NSURLResponse *)redirectResponse;
 @end
 
 

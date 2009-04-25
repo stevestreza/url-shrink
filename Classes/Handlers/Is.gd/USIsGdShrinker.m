@@ -9,7 +9,9 @@
 #import "USIsGdShrinker.h"
 
 @interface USIsGdShrinker (Private) 
-- (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse;
+-(NSURLRequest *)connection:(NSURLConnection *)connection
+            willSendRequest:(NSURLRequest *)request
+           redirectResponse:(NSURLResponse *)redirectResponse;
 @end
 
 @implementation USIsGdShrinker 
