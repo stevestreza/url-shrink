@@ -7,7 +7,6 @@
 //
 
 #import "USTrImShrinker.h"
-#import "TCDownload.h"
 
 @implementation USTrImShrinker
 
@@ -20,8 +19,6 @@
 	
 	NSLog(@"Tr.im URL: %@",trimURL);
 	
-//	NSString *urlString = [TCDownload loadResourceStringForURL: [NSURL URLWithString:trimURL] 
-//													  encoding: NSUTF8StringEncoding];
 	NSError *err = nil;
 	
 	NSString *urlString = [NSString stringWithContentsOfURL:[NSURL URLWithString:trimURL] encoding:NSUTF8StringEncoding error:&err];
@@ -46,14 +43,9 @@
 }
 
 -(void)performExpandOnURL:(NSURL *)url{
-	NSLog(@"Parts %@ %@",
-		  [url path],
-		  [url fragment]);
-	
 	NSString *trimpath = [[url path] substringFromIndex:1];
 	NSURL *newURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.tr.im/api/trim_destination.xml?trimpath=%@",trimpath]];
 	
-//	NSString *response = [TCDownload loadResourceStringForURL:newURL encoding:NSUTF8StringEncoding];
 	NSError *err = nil;
 	NSString *response = [NSString stringWithContentsOfURL:newURL encoding:NSUTF8StringEncoding error:&err];
 	if(!response || err){
