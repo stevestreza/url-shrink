@@ -28,8 +28,11 @@ URL Shrinkers
 There are three shrinkers in the system right now:
 
 1. Loopback - This is mainly for debugging, it simply returns the URL you submitted
-2. TinyURL
+2. TinyURL.com
 3. is.gd
+4. tr.im
+5. digg.com
+6. idek.net
 
 Writing a URL Shrinker
 ----------------------
