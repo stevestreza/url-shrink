@@ -8,7 +8,6 @@
 
 #import "USURLShrinker.h"
 
-#import "TCDownload.h"
 #import "USShrinkController.h"
 
 @implementation USURLShrinker

@@ -7,7 +7,6 @@
 //
 
 #import "USDiggShrinker.h"
-#import "TCDownload.h"
 
 #define kUSDiggShrinkerAPIEndpoint @"http://services.digg.com/url/short/create?url=%@&appkey=%@"
 #define kUSDiggShrinkerAppKey @"http://github.com/amazingsyco/url-shrink"
@@ -50,7 +49,12 @@
 }
 
 -(void)performExpandOnURL:(NSURL *)url{
-	NSString *html = [TCDownload loadResourceStringForURL:url encoding:NSUTF8StringEncoding];
+	NSError *err = nil;
+	NSString *html = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&err];
+	if(!html || err){
+		[self doneExpanding:url];
+		return;
+	}
 	NSScanner *scanner = [[NSScanner alloc] initWithString:html];
 	[scanner scanUpToString:@"<iframe" intoString:nil];
 	[scanner scanUpToString:@"src=\"" intoString:nil];
