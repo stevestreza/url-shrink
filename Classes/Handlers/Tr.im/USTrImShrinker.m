@@ -20,8 +20,16 @@
 	
 	NSLog(@"Tr.im URL: %@",trimURL);
 	
-	NSString *urlString = [TCDownload loadResourceStringForURL: [NSURL URLWithString:trimURL] 
-													  encoding: NSUTF8StringEncoding];
+//	NSString *urlString = [TCDownload loadResourceStringForURL: [NSURL URLWithString:trimURL] 
+//													  encoding: NSUTF8StringEncoding];
+	NSError *err = nil;
+	
+	NSString *urlString = [NSString stringWithContentsOfURL:[NSURL URLWithString:trimURL] encoding:NSUTF8StringEncoding error:&err];
+	
+	if(!urlString || err){
+		[self doneShrinking:url];
+		return;
+	}
 	
 	urlString = [urlString substringToIndex:[urlString length]-1];
 	urlString = [urlString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -45,9 +53,15 @@
 	NSString *trimpath = [[url path] substringFromIndex:1];
 	NSURL *newURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://api.tr.im/api/trim_destination.xml?trimpath=%@",trimpath]];
 	
-	NSString *response = [TCDownload loadResourceStringForURL:newURL encoding:NSUTF8StringEncoding];
-	NSXMLDocument *document = [[[NSXMLDocument alloc] initWithXMLString:response options:0 error:nil] autorelease];
+//	NSString *response = [TCDownload loadResourceStringForURL:newURL encoding:NSUTF8StringEncoding];
 	NSError *err = nil;
+	NSString *response = [NSString stringWithContentsOfURL:newURL encoding:NSUTF8StringEncoding error:&err];
+	if(!response || err){
+		[self doneExpanding:url];
+		return;
+	}
+	
+	NSXMLDocument *document = [[[NSXMLDocument alloc] initWithXMLString:response options:0 error:nil] autorelease];
 	NSArray *destNode = [[document rootElement] nodesForXPath:@"/trim/destination" error:&err];
 	if(destNode){
 		NSString *expandedURL = [[destNode objectAtIndex:0] stringValue];
