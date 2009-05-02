@@ -28,6 +28,11 @@
 	NSURL *newURL = [NSURL URLWithString:newURLString];
 	
 	NSString *xmlString = [NSString stringWithContentsOfURL:newURL];
+	if(!xmlString){
+		[self doneShrinking:url];
+		return;
+	}
+	
 	NSXMLDocument *xml = [[[NSXMLDocument alloc] initWithXMLString:xmlString options:0 error:nil] autorelease];
 	
 	if([[[xml rootElement] name] isEqualToString:@"error"]){
@@ -45,7 +50,13 @@
 }
 
 +(BOOL)canExpandURL:(NSURL *)url{
-	return ([[url host] isEqualToString:@"digg.com"]);
+	BOOL isValid = YES;
+	
+#define URLTest(__test) if(!(__test)) isValid = NO;
+	URLTest( [[url host] isEqualToString:@"digg.com"]);
+	URLTest([[[url path] pathComponents] count] == 2); /* '/u12EEU' expands to ['/', 'u12EEU'] */
+	
+	return isValid;
 }
 
 -(void)performExpandOnURL:(NSURL *)url{
