@@ -14,5 +14,7 @@
 
 +(USShrinkController *)sharedShrinkController;
 -(NSArray *)allShrinkers;
+-(USURLShrinker *)shrinkerWithName:(NSString*)shrinkerName;
 -(USURLShrinker *)shrinker;
+
 @end

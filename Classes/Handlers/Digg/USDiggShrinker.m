@@ -27,7 +27,7 @@
     
 	NSURL *newURL = [NSURL URLWithString:newURLString];
 	
-	NSString *xmlString = [NSString stringWithContentsOfURL:newURL];
+	NSString *xmlString = [NSString stringWithContentsOfURL:newURL encoding:NSUTF8StringEncoding error:nil];
 	if(!xmlString){
 		[self doneShrinking:url];
 		return;

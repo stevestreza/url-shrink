@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "USShrinkController.h"
-
 #import <ShortcutRecorder/ShortcutRecorder.h>
 
 @interface USSettingsController : NSWindowController {

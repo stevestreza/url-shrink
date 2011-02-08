@@ -28,6 +28,7 @@
 }
 
 - (void) awakeFromNib {
+	NSLog(@"sk = %@",[[NSUserDefaults standardUserDefaults] objectForKey:kSDShortenURLGLobalShortcutKey]);
 	[[SDGlobalShortcutsController sharedShortcutsController] attachControl:recorderControl
 															 toDefaultsKey:kSDShortenURLGLobalShortcutKey];
 }

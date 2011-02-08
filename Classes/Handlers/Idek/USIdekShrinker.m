@@ -36,7 +36,7 @@
     NSURL *shrinkURL = [NSURL URLWithString:s]; // assumes that the original URL is sanitized.
     
     // do request
-    NSString *shrinkResult = [NSString stringWithContentsOfURL:shrinkURL];
+    NSString *shrinkResult = [NSString stringWithContentsOfURL:shrinkURL encoding:NSUTF8StringEncoding error:nil];
     
     // wrap result and delegate
     NSURL *shrunkenURL = [NSURL URLWithString:shrinkResult];
@@ -51,7 +51,7 @@
     NSURL *expandURL = [NSURL URLWithString:s];
     
     //do request
-    NSString *expandResult = [NSString stringWithContentsOfURL:expandURL];
+    NSString *expandResult = [NSString stringWithContentsOfURL:expandURL encoding:NSUTF8StringEncoding error:nil];
     
     // wrap result and delegate
     NSURL *expandedURL = [NSURL URLWithString:expandResult];
