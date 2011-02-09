@@ -58,13 +58,18 @@
 	[super dealloc];
 }
 
+- (void)checkForKeyAndLogin_ {
+	NSAssert([[self class] requiresAPIKey] && self.apiKey != nil, @"This shrinker is set to require an API key, and none has been loaded");
+	NSAssert([[self class] requiresLogin] && self.login != nil, @"This shrinker is set to require a login name, and none has been loaded");
+}
+
 -(void)shrinkURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action{
+	[self checkForKeyAndLogin_];
 	_target = target;
 	_action = action;
 	sourceURL = [url copy];
-	
 	[NSThread detachNewThreadSelector:@selector(_startShrink:) toTarget:self withObject:url];
 }
 
@@ -95,6 +100,8 @@
 -(void)expandURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action{
+
+	[self checkForKeyAndLogin_];
 	_target = target;
 	_action = action;
 	sourceURL = [url copy];

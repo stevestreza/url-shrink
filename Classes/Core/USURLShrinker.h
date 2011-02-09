@@ -19,35 +19,35 @@
 @property(readonly) id apiKey, login;
 
 #pragma mark Initialization
-
+//optional, implement these if your service requires an API key or login
 - (id)initWithLogin:(id)newLogin apiKey:(id)newKey;
 - (id)initWithApiKey:(id)newKey;
 
 #pragma mark Methods for subclasses
 
-+(NSString *)name;
++ (NSString *)name;
 
-+(BOOL)canExpandURL:(NSURL *)url;
--(void)performExpandOnURL:(NSURL *)url;
--(void)performShrinkOnURL:(NSURL *)url;
++ (BOOL)canExpandURL:(NSURL *)url;
+- (void)performExpandOnURL:(NSURL *)url;
+- (void)performShrinkOnURL:(NSURL *)url;
 
-//optional, implement these if your service requires an API key
-+(BOOL)requiresAPIKey;
-+(BOOL)requiresLogin;
+//optional, implement these if your service requires an API key or login
++ (BOOL)requiresAPIKey;
++ (BOOL)requiresLogin;
 
 #pragma mark Internals
 
--(NSString *)name;
+- (NSString *)name;
 
--(void)shrinkURL:(NSURL *)url
+- (void)shrinkURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action;
 
--(void)expandURL:(NSURL *)url
+- (void)expandURL:(NSURL *)url
 		  target:(id)target
 		  action:(SEL)action;
 
--(void)doneExpanding:(NSURL *)url;
--(void)doneShrinking:(NSURL *)url;
+- (void)doneExpanding:(NSURL *)url;
+- (void)doneShrinking:(NSURL *)url;
 
 @end
