@@ -10,10 +10,18 @@
 
 @interface USURLShrinker : NSObject {
 	NSURL *sourceURL;
-	
 	id _target;
 	SEL _action;
+	id apiKey_;
+	id login_;
 }
+
+@property(readonly) id apiKey, login;
+
+#pragma mark Initialization
+
+- (id)initWithLogin:(id)newLogin apiKey:(id)newKey;
+- (id)initWithApiKey:(id)newKey;
 
 #pragma mark Methods for subclasses
 
@@ -25,7 +33,7 @@
 
 //optional, implement these if your service requires an API key
 +(BOOL)requiresAPIKey;
-+(id)APIKey;
++(BOOL)requiresLogin;
 
 #pragma mark Internals
 

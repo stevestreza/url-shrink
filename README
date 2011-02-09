@@ -6,14 +6,10 @@ License
 -------
 URL Shrink is licensed under the BSD license, and its adoption within Mac and iPhone applications is encouraged.
 
-Wishlist
+To-do
 --------
-
 - Automatic downtime detection and re-routing
-- Compiled .framework and .a for including in Mac and iPhone apps, respectively
-- Text service
-- Command line client
-- Shared default selection across applications (and sync across machines with MobileMe/Dropbox/etc.)
+- Expansion for newly added shrinkers (goog.gl,bit.ly etc.)
 
 Installation
 ------------
@@ -25,14 +21,15 @@ Run the application and copy a URL to the clipboard. Then, press Option-Shift-Sp
 
 URL Shrinkers
 -------------
-There are six shrinkers in the system right now:
 
-1. Loopback - This is mainly for debugging, it simply returns the URL you submitted
-2. TinyURL.com
-3. is.gd
-4. tr.im
-5. digg.com
-6. idek.net
+* Loopback - This is mainly for debugging, it simply returns the URL you submitted
+* TinyURL.com
+* is.gd
+* bit.ly (requires API key and login)
+* digg.com
+* idek.net
+* goo.gl (requires API key for production apps)
+* ndurl.com
 
 Writing a URL Shrinker
 ----------------------
@@ -45,3 +42,16 @@ This performs the guts of the shrink. You can schedule asynchronous operations t
 Must return a human-readable and unique name for your URL shrinker.
 
 Note: Developers no longer need to implement the +load method in subclasses of the URL Shrinker base-class.
+
+Optional: if you require an apiKey or login implement the following - 
+
++(BOOL)requiresAPIKey;
+return YES if shortener requires key.
++(BOOL)requiresLogin;
+return YES if shortener requires login.
+
+- (id)initWithLogin:(id)newLogin apiKey:(id)newKey;
+Init shrinker with login and apikey. 
+
+- (id)initWithApiKey:(id)newKey;
+Init shrinker with api key only (no login required)

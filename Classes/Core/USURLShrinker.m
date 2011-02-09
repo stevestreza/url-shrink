@@ -11,13 +11,14 @@
 #import "USShrinkController.h"
 
 @implementation USURLShrinker
+@synthesize login=login_, apiKey=apiKey_;
 
 +(BOOL)requiresAPIKey{
 	return NO;
 }
 
-+(id)APIKey{
-	return nil;
++(BOOL)requiresLogin {
+	return NO;
 }
 
 +(NSString *)name{
@@ -32,7 +33,26 @@
 	return NO;
 }
 
+- (id)initWithLogin:(id)newLogin apiKey:(id)newKey {
+	if ( (self = [self initWithApiKey:newKey]) ) {
+		login_ = [newLogin retain];
+		return self;
+	}
+	return nil;
+}
+
+- (id)initWithApiKey:(id)newKey {
+	if ( (self = [super init]) ) {
+		apiKey_ = [newKey retain];
+		return self;
+	}
+	return nil;
+}
+
+
 -(void)dealloc{
+	[apiKey_ release];
+	[login_ release];
 	[sourceURL release];
 	sourceURL = nil;
 	[super dealloc];

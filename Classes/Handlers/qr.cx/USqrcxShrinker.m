@@ -12,10 +12,6 @@
 	return @"qr.cx";
 }
 
-+(BOOL)requiresAPIKey {
-	return NO;
-}
-
 -(void)performShrinkOnURL:(NSURL *)url{
 	NSString *shortenRequest = [NSString stringWithFormat:@"http://qr.cx/api/?longurl=%@",[url absoluteString]];
 	NSURL *shortenRequestURL = [NSURL URLWithString:shortenRequest];

@@ -8,8 +8,5 @@
 #import "USIncludes.h"
 #import "JSONKit.h"
 
-@interface USqrcxShrinker : USURLShrinker {
-
-}
-
+@interface USqrcxShrinker : USURLShrinker {}
 @end
