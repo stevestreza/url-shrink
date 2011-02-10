@@ -5,6 +5,7 @@
 //  Created by Christopher Najewicz on 3/11/10.
 
 #import "USBitlyShrinker.h"
+#import "JSONKit.h"
 
 #define BIT_LY_BASE_URL @"http://api.bit.ly/v3/"
 
@@ -15,31 +16,28 @@
 + (BOOL)requiresAPIKey { return YES; }
 
 -(void)performShrinkOnURL:(NSURL *)url{
-	if( [self.login length] == 0 || [self.apiKey length] == 0) {
-		NSLog(@"Bit.ly ERROR: Zero length API key: %@ or login name: %@",self.apiKey,self.login);
+	NSError *bitlyError = nil;
+	
+	NSString *fixedURL = [USURLShrinker escapeURL:url];
+	NSString *bitlyURL = [NSString stringWithFormat:@"%@shorten?longUrl=%@&login=%@&apiKey=%@",BIT_LY_BASE_URL,fixedURL,self.login,self.apiKey];
+	NSString *xmlString = [NSString stringWithContentsOfURL:[NSURL URLWithString:bitlyURL] encoding:NSUTF8StringEncoding error:&bitlyError];
+	
+	if (bitlyError) {
+		NSLog(@"Error shrinking bit.ly URL - %@",bitlyError);
+		[self doneShrinking:nil];
 		return;
 	}
 	
-	NSString *bitlyURL = [NSString stringWithFormat:@"%@shorten?longUrl=%@&login=%@&apiKey=%@&format=xml",BIT_LY_BASE_URL,[url absoluteString],self.login,self.apiKey];
-	NSString *xmlString = [NSString stringWithContentsOfURL:[NSURL URLWithString:bitlyURL] encoding:NSUTF8StringEncoding error:nil];
+	id resultObj = [xmlString objectFromJSONString];
 	
-	if(!xmlString){
-		[self doneShrinking:url];
+	if ([[resultObj objectForKey:@"status_code"] intValue] != 200) {
+		NSLog(@"Error from bit.ly status code = %i : \"%@\"",[[resultObj objectForKey:@"status_code"] intValue],[resultObj objectForKey:@"status_txt"]);
+		[self doneShrinking:nil];
 		return;
 	}
 	
-	NSXMLDocument *xml = [[[NSXMLDocument alloc] initWithXMLString:xmlString options:0 error:nil] autorelease];
-	NSXMLElement *root = [xml rootElement];
-	NSXMLElement *errornode = [[root elementsForName:@"errorCode"] objectAtIndex:0];
-	
-	if(![[errornode stringValue] isEqualToString:@"0"]){
-		[self doneShrinking:url];
-		return;
-	}
-	
-	NSXMLElement *shorturl = [[[[[[root elementsForName:@"results"] objectAtIndex:0] elementsForName:@"nodeKeyVal"] objectAtIndex:0] elementsForName:@"shortUrl"] objectAtIndex:0];
-	NSURL *newURL = [NSURL URLWithString:[shorturl stringValue]];
-	[self doneShrinking:newURL];
+	NSString *shortenedURLString = [[resultObj objectForKey:@"data"] objectForKey:@"url"];
+	[self doneShrinking:[NSURL URLWithString:shortenedURLString]];
 }
 
 +(BOOL)canExpandURL:(NSURL *)url{

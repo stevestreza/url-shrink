@@ -21,6 +21,18 @@
 	return NO;
 }
 
++(id)login {
+	return nil;
+}
+
++(id)apiKey {
+	return nil;
+}
+
++(NSString*)escapeURL:(NSURL*)url {
+	return [[url absoluteString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
 +(NSString *)name{
 	return nil;
 }
@@ -44,6 +56,15 @@
 - (id)initWithApiKey:(id)newKey {
 	if ( (self = [super init]) ) {
 		apiKey_ = [newKey retain];
+		return self;
+	}
+	return nil;
+}
+
+- (id)init {
+	if ( (self = [super init]) ) {
+		apiKey_ = [[self class] requiresAPIKey] ? [[self class] apiKey] : nil; 
+		login_ = [[self class] requiresLogin] ? [[self class] login] : nil; 
 		return self;
 	}
 	return nil;
@@ -105,7 +126,6 @@
 	_target = target;
 	_action = action;
 	sourceURL = [url copy];
-	NSLog(@"Source URL: %@",sourceURL);
 	[NSThread detachNewThreadSelector:@selector(_startExpand:) toTarget:self withObject:url];	
 }
 

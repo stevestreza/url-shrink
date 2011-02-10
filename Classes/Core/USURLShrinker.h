@@ -27,6 +27,11 @@
 
 + (NSString *)name;
 
+// optional, if you prefer to hardcode the api key / login into the framework instead of 
+// defining it explicitly through initWithLogin.
++ (id)login;
++ (id)apiKey;
+
 + (BOOL)canExpandURL:(NSURL *)url;
 - (void)performExpandOnURL:(NSURL *)url;
 - (void)performShrinkOnURL:(NSURL *)url;
@@ -36,6 +41,9 @@
 + (BOOL)requiresLogin;
 
 #pragma mark Internals
+
+// Assumes UTF8 encoding
++ (NSString*)escapeURL:(NSURL*)url;
 
 - (NSString *)name;
 

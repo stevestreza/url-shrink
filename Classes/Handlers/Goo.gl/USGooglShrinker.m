@@ -22,7 +22,6 @@
 		See also: http://code.google.com/apis/urlshortener/v1/reference.html
 	*/
 	
-	NSLog(@"start shrink on goo.gl");
 	NSURL *googleRestRequestURL = [NSURL URLWithString:GOO_GL_BASE];
 	NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:googleRestRequestURL];
 	[req setHTTPMethod:@"POST"];
