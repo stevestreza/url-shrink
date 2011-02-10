@@ -98,9 +98,12 @@
 }	
 
 -(void)writeURL:(NSURL *)url toPasteboard:(NSPasteboard *)pboard{
+	// Added the % decode for tinyarro.ws support, shouldn't affect other shorteners
+	NSString *urlToCopy = [[url absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	
 	[pboard declareTypes:[NSArray arrayWithObjects:NSURLPboardType, NSStringPboardType,nil] owner:self];
-	[pboard setString:[url absoluteString] forType:NSURLPboardType];
-	[pboard setString:[url absoluteString] forType:NSStringPboardType];		
+	[pboard setString:urlToCopy forType:NSURLPboardType];
+	[pboard setString:urlToCopy forType:NSStringPboardType];		
 }
 
 -(void)URLShrunk:(NSURL *)newURL{
