@@ -10,6 +10,7 @@ To-do
 --------
 - Automatic downtime detection and re-routing
 - Expansion for newly added shrinkers (goog.gl,bit.ly etc.)
+- More abstraction for service-specific options (tracking, username, host preference etc.)
 
 Installation
 ------------
@@ -30,6 +31,7 @@ URL Shrinkers
 * idek.net
 * goo.gl (requires API key for production apps)
 * ndurl.com
+* tinyarro.ws (specify preferred host in class file #define)
 
 Writing a URL Shrinker
 ----------------------
@@ -55,3 +57,9 @@ Init shrinker with login and apikey.
 
 - (id)initWithApiKey:(id)newKey;
 Init shrinker with api key only (no login required)
+
+Or, if you prefer to hard-code any login/apikey information in your class files, you can use
++ (id)login;
++ (id)apiKey;
+
+Both of these are used in the default init of a USURLShrinker. If you use the init's mentioned above, they will override any class method login/apiKey information.
