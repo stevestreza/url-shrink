@@ -18,44 +18,44 @@
 }
 
 -(void)performShrinkOnURL:(NSURL *)url{
-    
+
 	NSString *newURLString = [NSString stringWithFormat:
 							  kUSDiggShrinkerAPIEndpoint,
 							  [[url absoluteString] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
 							  kUSDiggShrinkerAppKey
 							  ];
-    
+
 	NSURL *newURL = [NSURL URLWithString:newURLString];
-	
+
 	NSString *xmlString = [NSString stringWithContentsOfURL:newURL];
 	if(!xmlString){
 		[self doneShrinking:url];
 		return;
 	}
-	
+
 	NSXMLDocument *xml = [[[NSXMLDocument alloc] initWithXMLString:xmlString options:0 error:nil] autorelease];
-	
+
 	if([[[xml rootElement] name] isEqualToString:@"error"]){
 		[self doneShrinking:url];
 		return;
 	}
-	
+
 	NSXMLElement *shorturl = (NSXMLElement*)[[xml rootElement] childAtIndex:0];
-	
+
 	NSString *tinyURLString = [[shorturl attributeForName:@"short_url"] stringValue];
 	NSURL *tinyURL = [NSURL URLWithString:tinyURLString];
-	
+
 	[self doneShrinking:tinyURL];
-	
+
 }
 
 +(BOOL)canExpandURL:(NSURL *)url{
 	BOOL isValid = YES;
-	
+
 #define URLTest(__test) if(!(__test)) isValid = NO;
 	URLTest( [[url host] isEqualToString:@"digg.com"]);
 	URLTest([[[url path] pathComponents] count] == 2); /* '/u12EEU' expands to ['/', 'u12EEU'] */
-	
+
 	return isValid;
 }
 
@@ -69,12 +69,12 @@
 	NSScanner *scanner = [[NSScanner alloc] initWithString:html];
 	[scanner scanUpToString:@"<iframe" intoString:nil];
 	[scanner scanUpToString:@"src=\"" intoString:nil];
-	
+
 	[scanner setScanLocation:[scanner scanLocation] + ([@"src=\"" length])];
-	
+
 	NSString *source = nil;
 	[scanner scanUpToString:@"\"" intoString:&source];
-	
+
 	if(source){
 		NSURL *url = [NSURL URLWithString:source];
 		[self doneExpanding:url];

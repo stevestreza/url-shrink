@@ -9,11 +9,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef struct _CTGradientElement 
+typedef struct _CTGradientElement
 	{
 	float red, green, blue, alpha;
 	float position;
-	
+
 	struct _CTGradientElement *nextElement;
 	} CTGradientElement;
 
@@ -29,7 +29,7 @@ typedef enum  _CTBlendingMode
 	{
 	CTGradientElement* elementList;
 	CTGradientBlendingMode blendingMode;
-	
+
 	CGFunctionRef gradientFunction;
 	}
 

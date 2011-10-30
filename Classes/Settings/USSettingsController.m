@@ -34,16 +34,16 @@
 
 -(void)setupStatusItem{
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
-	
+
 	[statusItem setView:[[[NSView alloc] init] autorelease]];
 	statusItemWindow = [[statusItem view] window];
 	[statusItem setView:nil];
-	
+
 	NSImage *menuBarIcon = [NSImage imageNamed:@"menubar-icon"];
 	[statusItem setImage:menuBarIcon];
-	
+
 	[statusItem setHighlightMode:YES];
-	
+
 	[statusItem setTarget:self];
 	[statusItem setAction:@selector(toggleWindow:)];
 }
@@ -59,18 +59,18 @@
 +(MAAttachedWindow *)bubbleWindowForWindow:(NSWindow *)window atFrame:(NSRect)hackFrame {
 //	NSDisableScreenUpdates();
 //	NSEnableScreenUpdates();
-	NSPoint centerPoint = NSMakePoint(hackFrame.origin.x + (hackFrame.size.width/2.), 
+	NSPoint centerPoint = NSMakePoint(hackFrame.origin.x + (hackFrame.size.width/2.),
 									  hackFrame.origin.y - (hackFrame.size.height*3/4.));
-	
-	MAAttachedWindow *newWindow = [[MAAttachedWindow alloc] initWithView:[window contentView] 
+
+	MAAttachedWindow *newWindow = [[MAAttachedWindow alloc] initWithView:[window contentView]
 														 attachedToPoint:centerPoint
 																  onSide:(MAWindowPosition)MAPositionBottom	];
-	
+
 	[newWindow setLevel:NSStatusWindowLevel+1];
-	
+
 	[newWindow setBorderWidth:1.0];
 	[newWindow setBorderColor:[NSColor colorWithCalibratedWhite:0.2 alpha:0.75]];
-	
+
 	return [newWindow autorelease];
 }
 
