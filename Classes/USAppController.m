@@ -53,39 +53,27 @@
 	return urlString;
 }
 
-//-(void)shrinkURL:(id)something{
+
 -(void)handleHotKeyEvent:(id)sender {
 	NSPasteboard *pboard = [NSPasteboard generalPasteboard];
-	NSArray *types = [pboard types];
-
 	NSString *urlString = nil;
 	NSURL *url = nil;
-	
-	if([types containsObject:NSURLPboardType]){
-		urlString = [pboard stringForType:NSURLPboardType];
-	}else if([types containsObject:NSStringPboardType]){
-		urlString = [pboard stringForType:NSStringPboardType];
-	}
-	
-	urlString = [USAppController sanitizeURLString:urlString];
+
+	urlString = [USAppController sanitizeURLString:[[NSURL URLFromPasteboard:pboard] absoluteString]];
 	
 	if(urlString && [self validateURLString:urlString]){
 		url = [NSURL URLWithString:urlString];
 	}
 	
 	if(url){
-		NSLog(@"Shrinking URL %@",url);
-		
 		BOOL handled = NO;
 		for(Class shrinkerClass in [[USShrinkController sharedShrinkController] allShrinkers]){
 			if([shrinkerClass canExpandURL:url]){
 				USURLShrinker *shrinker = [[shrinkerClass alloc] init];
 				[shrinker expandURL:url target:self action:@selector(URLExpanded:)];
-				
 				handled = YES;
 			}
 		}
-		
 		if(!handled){
 			USURLShrinker *shrinker = [[USShrinkController sharedShrinkController] shrinker];
 			[shrinker shrinkURL:url target:self action:@selector(URLShrunk:)];
@@ -110,9 +98,12 @@
 }	
 
 -(void)writeURL:(NSURL *)url toPasteboard:(NSPasteboard *)pboard{
+	// Added the % decode for tinyarro.ws support, shouldn't affect other shorteners
+	NSString *urlToCopy = [[url absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+	
 	[pboard declareTypes:[NSArray arrayWithObjects:NSURLPboardType, NSStringPboardType,nil] owner:self];
-	[pboard setString:[url absoluteString] forType:NSURLPboardType];
-	[pboard setString:[url absoluteString] forType:NSStringPboardType];		
+	[pboard setString:urlToCopy forType:NSURLPboardType];
+	[pboard setString:urlToCopy forType:NSStringPboardType];		
 }
 
 -(void)URLShrunk:(NSURL *)newURL{

@@ -28,6 +28,7 @@
 	NSError *err = nil;
 	NSString *tinyURLString = [NSString stringWithContentsOfURL:newURL encoding:NSUTF8StringEncoding error:&err];
 	if(!tinyURLString || err){
+		NSLog(@"Error in tinyurl!");
 		[self doneShrinking:url];
 		return;
 	}

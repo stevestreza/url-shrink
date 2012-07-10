@@ -8,7 +8,6 @@
 
 #import "USSettingsController.h"
 #import "MAAttachedWindow.h"
-
 #import <SDGlobalShortcuts/SDGlobalShortcuts.h>
 
 @interface USSettingsController (Private)

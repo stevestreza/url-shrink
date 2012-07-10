@@ -46,7 +46,7 @@ NSInteger ShrinkerSorter(Class shrinker1, Class shrinker2, void* context) {
 	return shrinkers;
 }
 
-- (Class) shrinkerForName:(NSString*)shrinkerName {
+- (Class)shrinkerForName:(NSString*)shrinkerName {
 	for (Class shrinkerClass in [self allShrinkers]) {
 		if ([[shrinkerClass name] isEqualToString:shrinkerName])
 			return shrinkerClass;
@@ -54,16 +54,23 @@ NSInteger ShrinkerSorter(Class shrinker1, Class shrinker2, void* context) {
 	return nil;
 }
 
+-(USURLShrinker *)shrinkerWithName:(NSString*)shrinkerName {
+	Class shrinkerClass = [self shrinkerForName:shrinkerName];
+
+	if(shrinkerClass){
+		return [[[shrinkerClass alloc] init] autorelease];
+	} else
+		return nil;
+}
+
 -(USURLShrinker *)shrinker{
 	Class shrinkerClass = NULL;
-	
 	NSArray *shrinkers = [self allShrinkers];
 	
 	//get the user's preferred class
 	NSString *defaultsValue = [[NSUserDefaults standardUserDefaults] stringForKey:kUSShrinkChoiceDefaultsKey];
 	shrinkerClass = [self shrinkerForName:defaultsValue];
 	if (shrinkerClass){
-		NSLog(@"Found user default: %@",defaultsValue);
 		shrinkerClass = [self shrinkerForName:defaultsValue];
 	}
 	
@@ -71,17 +78,15 @@ NSInteger ShrinkerSorter(Class shrinker1, Class shrinker2, void* context) {
 	if(!shrinkerClass){
 		NSUInteger index = 0;
 		if(shrinkers.count > 1){
-
 			index = GetRandom(1, [shrinkers count]) - 1;
 		}
-	
 		shrinkerClass = [shrinkers objectAtIndex:index];
 	}
-
+	
 	//if it exists, make one
 	if(shrinkerClass){
 		return [[[shrinkerClass alloc] init] autorelease];
-	}else return nil;
+	} else return nil;
 }
 
 @end

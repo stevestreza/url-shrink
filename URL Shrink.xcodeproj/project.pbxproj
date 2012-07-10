@@ -25,16 +25,16 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		1E433D400F8339DD001FC357 /* USURLShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796A870F811D1800D9C477 /* USURLShrinker.h */; };
+		1E433D400F8339DD001FC357 /* USURLShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796A870F811D1800D9C477 /* USURLShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E433D410F8339DD001FC357 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
-		1E433D440F8339DD001FC357 /* USShrinkController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C3A0F8130EE00D9C477 /* USShrinkController.h */; };
+		1E433D440F8339DD001FC357 /* USShrinkController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C3A0F8130EE00D9C477 /* USShrinkController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E433D450F8339DD001FC357 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
-		1E433D460F8339DD001FC357 /* USIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C610F81386500D9C477 /* USIncludes.h */; };
-		1E433D470F8339DD001FC357 /* USIsGdShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C850F813BB100D9C477 /* USIsGdShrinker.h */; };
+		1E433D460F8339DD001FC357 /* USIncludes.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C610F81386500D9C477 /* USIncludes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E433D470F8339DD001FC357 /* USIsGdShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796C850F813BB100D9C477 /* USIsGdShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E433D480F8339DD001FC357 /* USIsGdShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C860F813BB100D9C477 /* USIsGdShrinker.m */; };
-		1E433D490F8339DD001FC357 /* USLoopbackShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796D3A0F8144E200D9C477 /* USLoopbackShrinker.h */; };
+		1E433D490F8339DD001FC357 /* USLoopbackShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA796D3A0F8144E200D9C477 /* USLoopbackShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E433D4A0F8339DD001FC357 /* USLoopbackShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */; };
-		1E433D4B0F8339DD001FC357 /* USTinyurlShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E8D94E00F81808200C77274 /* USTinyurlShrinker.h */; };
+		1E433D4B0F8339DD001FC357 /* USTinyurlShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E8D94E00F81808200C77274 /* USTinyurlShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E433D4C0F8339DD001FC357 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E433D4D0F8339F7001FC357 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		1E433D560F833A51001FC357 /* URLShrink.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E433D3B0F8339CB001FC357 /* URLShrink.framework */; };
@@ -50,45 +50,80 @@
 		1E433DA60F833B39001FC357 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E433DA70F833B39001FC357 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
 		1E433DA80F833B39001FC357 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
-		1E57DCF10FA3A1F70039E1F5 /* USURLRedirectShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E57DCEF0FA3A1F70039E1F5 /* USURLRedirectShrinker.h */; };
-		1E8D94E30F81808200C77274 /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
 		1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D958B0F818BD600C77274 /* USSettingsController.m */; };
 		1E8D958F0F818C3700C77274 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E8D958D0F818C3700C77274 /* Settings.xib */; };
 		1E8D987E0F81DEFA00C77274 /* MAAttachedWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */; };
-		1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */; };
+		1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EC4BA120F87373600E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BA100F87373600E91EEC /* USDiggShrinker.m */; };
 		1EC4BA130F87373600E91EEC /* USDiggShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */; };
 		1EC4BA140F87373600E91EEC /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BA100F87373600E91EEC /* USDiggShrinker.m */; };
-		1EC4BB7B0F87D8C400E91EEC /* USTrImShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */; };
-		1EC4BB7C0F87D8C400E91EEC /* USTrImShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */; };
-		1EC4BB7D0F87D8C400E91EEC /* USTrImShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */; };
-		1EC4BB7E0F87D8C400E91EEC /* USTrImShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */; };
-		8027E3950FA0F2B900AF3D97 /* USIdekShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */; };
 		80EEDC7B0FA2284000417384 /* menubar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 80EEDC7A0FA2284000417384 /* menubar-icon.png */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		900F54CD1301974400297D98 /* SDGlobalShortcuts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 900F54CC1301974400297D98 /* SDGlobalShortcuts.framework */; };
+		90143A881193615200EB865E /* USklamShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90143A861193615200EB865E /* USklamShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90143A891193615200EB865E /* USklamShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90143A871193615200EB865E /* USklamShrinker.m */; };
+		90143A8B1193615200EB865E /* USklamShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90143A861193615200EB865E /* USklamShrinker.h */; };
+		90143A8C1193615200EB865E /* USklamShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90143A871193615200EB865E /* USklamShrinker.m */; };
+		90243EE01301DAD00068689B /* USqrcxShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90243EDD1301DAD00068689B /* USqrcxShrinker.h */; };
+		90243EE11301DAD00068689B /* USqrcxShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90243EDE1301DAD00068689B /* USqrcxShrinker.m */; };
+		90243EE21301DAD00068689B /* USqrcxShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90243EDD1301DAD00068689B /* USqrcxShrinker.h */; };
+		90243EE31301DAD00068689B /* USqrcxShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90243EDE1301DAD00068689B /* USqrcxShrinker.m */; };
+		90243EE41301DAD00068689B /* USqrcxShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90243EDE1301DAD00068689B /* USqrcxShrinker.m */; };
+		90243EED1301DC0D0068689B /* USNdurlShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90243EC81301D8830068689B /* USNdurlShrinker.h */; };
+		90243EEE1301DC0E0068689B /* USNdurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90243EC91301D8830068689B /* USNdurlShrinker.m */; };
+		90243EEF1301DC1D0068689B /* USIdekShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8027E3930FA0F2B900AF3D97 /* USIdekShrinker.h */; };
+		90243EF01301DC1D0068689B /* USIdekShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */; };
+		90243EF11301DC1E0068689B /* USNdurlShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 90243EC81301D8830068689B /* USNdurlShrinker.h */; };
+		90243EF21301DC1F0068689B /* USNdurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90243EC91301D8830068689B /* USNdurlShrinker.m */; };
+		90243EF31301DC280068689B /* USNdurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90243EC91301D8830068689B /* USNdurlShrinker.m */; };
+		9036718B11494E53007A8AF1 /* USBitlyShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9036718911494E53007A8AF1 /* USBitlyShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9036718C11494E53007A8AF1 /* USBitlyShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9036718A11494E53007A8AF1 /* USBitlyShrinker.m */; };
+		9036718F11494E53007A8AF1 /* USBitlyShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9036718911494E53007A8AF1 /* USBitlyShrinker.h */; };
+		9036719011494E53007A8AF1 /* USBitlyShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9036718A11494E53007A8AF1 /* USBitlyShrinker.m */; };
+		903D7D0A130197A300D77D25 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 900F54B91301972500297D98 /* ShortcutRecorder.framework */; };
+		903D7D3B130198C200D77D25 /* SDGlobalShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900F54CC1301974400297D98 /* SDGlobalShortcuts.framework */; };
+		903D7D3C130198C200D77D25 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900F54B91301972500297D98 /* ShortcutRecorder.framework */; };
+		9048D78A13043E1700DDC889 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048D78813043E1700DDC889 /* JSONKit.h */; };
+		9048D78C13043E1700DDC889 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048D78813043E1700DDC889 /* JSONKit.h */; };
+		9048D78D13043E1700DDC889 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048D78913043E1700DDC889 /* JSONKit.m */; };
+		9048D7A113043EBC00DDC889 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048D78913043E1700DDC889 /* JSONKit.m */; };
+		9048D8201304499200DDC889 /* UStinyarrowsShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048D81E1304499200DDC889 /* UStinyarrowsShrinker.h */; };
+		9048D8211304499200DDC889 /* UStinyarrowsShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048D81F1304499200DDC889 /* UStinyarrowsShrinker.m */; };
+		9048D8221304499200DDC889 /* UStinyarrowsShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048D81E1304499200DDC889 /* UStinyarrowsShrinker.h */; };
+		9048D8231304499200DDC889 /* UStinyarrowsShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048D81F1304499200DDC889 /* UStinyarrowsShrinker.m */; };
+		9049F17C12FC66120065AC5C /* USLoopbackShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */; };
+		9049F17D12FC66120065AC5C /* USIdekShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */; };
+		9049F17E12FC66120065AC5C /* USklamShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 90143A871193615200EB865E /* USklamShrinker.m */; };
+		9049F17F12FC66120065AC5C /* USIsGdShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C860F813BB100D9C477 /* USIsGdShrinker.m */; };
+		9049F18012FC66120065AC5C /* USGooglShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 907057001193040900361529 /* USGooglShrinker.m */; };
+		9049F18112FC66120065AC5C /* USTinyurlShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */; };
+		9049F18212FC66120065AC5C /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
+		9049F18312FC66120065AC5C /* USDiggShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC4BA100F87373600E91EEC /* USDiggShrinker.m */; };
+		9049F18412FC66120065AC5C /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
+		9049F18512FC66120065AC5C /* USBitlyShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9036718A11494E53007A8AF1 /* USBitlyShrinker.m */; };
+		9049F24712FC6B540065AC5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		9051F7731149791300ADE40C /* USIdekShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8027E3930FA0F2B900AF3D97 /* USIdekShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9051F7741149791300ADE40C /* USIdekShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8027E3940FA0F2B900AF3D97 /* USIdekShrinker.m */; };
+		907057021193040900361529 /* USGooglShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 907057001193040900361529 /* USGooglShrinker.m */; };
+		907057031193040900361529 /* USGooglShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 907057011193040900361529 /* USGooglShrinker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		907057051193040900361529 /* USGooglShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 907057001193040900361529 /* USGooglShrinker.m */; };
+		907057061193040900361529 /* USGooglShrinker.h in Headers */ = {isa = PBXBuildFile; fileRef = 907057011193040900361529 /* USGooglShrinker.h */; };
+		90BE23F9130047760087278C /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 90BE23F5130047760087278C /* JSONKit.h */; };
+		90BE23FA130047760087278C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BE23F6130047760087278C /* JSONKit.m */; };
 		AA796A8C0F811D2900D9C477 /* USAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A8B0F811D2900D9C477 /* USAppController.m */; };
 		AA796A8E0F811D6000D9C477 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA796A8D0F811D6000D9C477 /* Carbon.framework */; };
-		AA796F990F81550D00D9C477 /* tool_main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796F980F81550D00D9C477 /* tool_main.m */; };
 		AA796F9A0F81554200D9C477 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
-		AA796FA20F815B7700D9C477 /* USIsGdShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C860F813BB100D9C477 /* USIsGdShrinker.m */; };
-		AA796FA30F815B7700D9C477 /* USLoopbackShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */; };
-		AA796FA40F815B7700D9C477 /* USShrinkController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796C3B0F8130EE00D9C477 /* USShrinkController.m */; };
-		AA796FA50F815B7700D9C477 /* USURLShrinker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA796A880F811D1800D9C477 /* USURLShrinker.m */; };
-		B0585F960F9FFF4800BB4A33 /* SDGlobalShortcuts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */; };
-		B0585F970F9FFF4800BB4A33 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */; };
-		B0585FB00FA000CB00BB4A33 /* SDGlobalShortcuts.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */; };
-		B0585FB10FA000CB00BB4A33 /* ShortcutRecorder.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E433D520F833A38001FC357 /* PBXContainerItemProxy */ = {
+		90BE244513004B170087278C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1E433D3A0F8339CB001FC357;
-			remoteInfo = URLShrink;
+			remoteInfo = URLShrink.framework;
 		};
 		B058611F0FA017BE00BB4A33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -127,8 +162,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B0585FB00FA000CB00BB4A33 /* SDGlobalShortcuts.framework in CopyFiles */,
-				B0585FB10FA000CB00BB4A33 /* ShortcutRecorder.framework in CopyFiles */,
+				903D7D0A130197A300D77D25 /* ShortcutRecorder.framework in CopyFiles */,
+				900F54CD1301974400297D98 /* SDGlobalShortcuts.framework in CopyFiles */,
 				1E433D560F833A51001FC357 /* URLShrink.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,8 +178,6 @@
 		1E433D3B0F8339CB001FC357 /* URLShrink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = URLShrink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E433D3C0F8339CB001FC357 /* URLShrink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "URLShrink-Info.plist"; sourceTree = "<group>"; };
 		1E433D980F833B0A001FC357 /* libURLShrink.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libURLShrink.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E57DCEF0FA3A1F70039E1F5 /* USURLRedirectShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USURLRedirectShrinker.h; sourceTree = "<group>"; };
-		1E57DCF00FA3A1F70039E1F5 /* USURLRedirectShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USURLRedirectShrinker.m; sourceTree = "<group>"; };
 		1E8D94E00F81808200C77274 /* USTinyurlShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTinyurlShrinker.h; sourceTree = "<group>"; };
 		1E8D94E10F81808200C77274 /* USTinyurlShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTinyurlShrinker.m; sourceTree = "<group>"; };
 		1E8D958A0F818BD600C77274 /* USSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USSettingsController.h; sourceTree = "<group>"; };
@@ -154,8 +187,6 @@
 		1E8D987D0F81DEFA00C77274 /* MAAttachedWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAAttachedWindow.m; sourceTree = "<group>"; };
 		1EC4BA0F0F87373600E91EEC /* USDiggShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USDiggShrinker.h; sourceTree = "<group>"; };
 		1EC4BA100F87373600E91EEC /* USDiggShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USDiggShrinker.m; sourceTree = "<group>"; };
-		1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USTrImShrinker.h; sourceTree = "<group>"; };
-		1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USTrImShrinker.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -165,6 +196,24 @@
 		80EEDC7A0FA2284000417384 /* menubar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-icon.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Shrink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shrink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		900F54B91301972500297D98 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = "<group>"; };
+		900F54CC1301974400297D98 /* SDGlobalShortcuts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDGlobalShortcuts.framework; path = Frameworks/SDGlobalShortcuts.framework; sourceTree = "<group>"; };
+		90143A861193615200EB865E /* USklamShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USklamShrinker.h; sourceTree = "<group>"; };
+		90143A871193615200EB865E /* USklamShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USklamShrinker.m; sourceTree = "<group>"; };
+		90243EC81301D8830068689B /* USNdurlShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USNdurlShrinker.h; sourceTree = "<group>"; };
+		90243EC91301D8830068689B /* USNdurlShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USNdurlShrinker.m; sourceTree = "<group>"; };
+		90243EDD1301DAD00068689B /* USqrcxShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USqrcxShrinker.h; sourceTree = "<group>"; };
+		90243EDE1301DAD00068689B /* USqrcxShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USqrcxShrinker.m; sourceTree = "<group>"; };
+		9036718911494E53007A8AF1 /* USBitlyShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USBitlyShrinker.h; sourceTree = "<group>"; };
+		9036718A11494E53007A8AF1 /* USBitlyShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USBitlyShrinker.m; sourceTree = "<group>"; };
+		9048D78813043E1700DDC889 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9048D78913043E1700DDC889 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		9048D81E1304499200DDC889 /* UStinyarrowsShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UStinyarrowsShrinker.h; sourceTree = "<group>"; };
+		9048D81F1304499200DDC889 /* UStinyarrowsShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UStinyarrowsShrinker.m; sourceTree = "<group>"; };
+		907057001193040900361529 /* USGooglShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USGooglShrinker.m; sourceTree = "<group>"; };
+		907057011193040900361529 /* USGooglShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USGooglShrinker.h; sourceTree = "<group>"; };
+		90BE23F5130047760087278C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		90BE23F6130047760087278C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		AA796A870F811D1800D9C477 /* USURLShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USURLShrinker.h; sourceTree = "<group>"; };
 		AA796A880F811D1800D9C477 /* USURLShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USURLShrinker.m; sourceTree = "<group>"; };
 		AA796A8A0F811D2900D9C477 /* USAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USAppController.h; sourceTree = "<group>"; };
@@ -178,9 +227,6 @@
 		AA796D3A0F8144E200D9C477 /* USLoopbackShrinker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USLoopbackShrinker.h; sourceTree = "<group>"; };
 		AA796D3B0F8144E200D9C477 /* USLoopbackShrinker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USLoopbackShrinker.m; sourceTree = "<group>"; };
 		AA796D7E0F81546300D9C477 /* shrink */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = shrink; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA796F980F81550D00D9C477 /* tool_main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool_main.m; sourceTree = "<group>"; };
-		B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDGlobalShortcuts.framework; path = Frameworks/SDGlobalShortcuts.framework; sourceTree = "<group>"; };
-		B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShortcutRecorder.framework; path = Frameworks/ShortcutRecorder.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,11 +249,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903D7D3B130198C200D77D25 /* SDGlobalShortcuts.framework in Frameworks */,
+				903D7D3C130198C200D77D25 /* ShortcutRecorder.framework in Frameworks */,
 				1E433D5D0F833A58001FC357 /* URLShrink.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				AA796A8E0F811D6000D9C477 /* Carbon.framework in Frameworks */,
-				B0585F960F9FFF4800BB4A33 /* SDGlobalShortcuts.framework in Frameworks */,
-				B0585F970F9FFF4800BB4A33 /* ShortcutRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +271,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9048D78713043E1700DDC889 /* JSONKit */,
 				AA796A8A0F811D2900D9C477 /* USAppController.h */,
 				AA796A8B0F811D2900D9C477 /* USAppController.m */,
 				1EC4B9680F872AAA00E91EEC /* Core */,
@@ -248,8 +295,8 @@
 		1E433DAA0F833B45001FC357 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				B0585F940F9FFF4800BB4A33 /* SDGlobalShortcuts.framework */,
-				B0585F950F9FFF4800BB4A33 /* ShortcutRecorder.framework */,
+				900F54CC1301974400297D98 /* SDGlobalShortcuts.framework */,
+				900F54B91301972500297D98 /* ShortcutRecorder.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -289,10 +336,13 @@
 		1EC4B9660F872A9700E91EEC /* Handlers */ = {
 			isa = PBXGroup;
 			children = (
+				9048D81D1304499200DDC889 /* tinyarro.ws */,
+				90243EDC1301DAD00068689B /* qr.cx */,
+				90243EC71301D8830068689B /* ndurl */,
+				90143A851193615200EB865E /* kl.am */,
+				907056FF119303DD00361529 /* Goo.gl */,
 				8027E3910FA0F24900AF3D97 /* Idek */,
-				8027E37B0FA0F1FE00AF3D97 /* Cli.gs */,
 				1EC4BB6E0F87D80C00E91EEC /* Bit.ly */,
-				1EC4BB6D0F87D7FF00E91EEC /* Tr.im */,
 				1EC4BA060F87371B00E91EEC /* Digg */,
 				1EC4B9690F872ABC00E91EEC /* Tinyurl */,
 				1EC4B9670F872AA200E91EEC /* Is.gd */,
@@ -318,8 +368,6 @@
 				AA796A880F811D1800D9C477 /* USURLShrinker.m */,
 				AA796C3A0F8130EE00D9C477 /* USShrinkController.h */,
 				AA796C3B0F8130EE00D9C477 /* USShrinkController.m */,
-				1E57DCEF0FA3A1F70039E1F5 /* USURLRedirectShrinker.h */,
-				1E57DCF00FA3A1F70039E1F5 /* USURLRedirectShrinker.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -342,18 +390,11 @@
 			path = Digg;
 			sourceTree = "<group>";
 		};
-		1EC4BB6D0F87D7FF00E91EEC /* Tr.im */ = {
-			isa = PBXGroup;
-			children = (
-				1EC4BB790F87D8C400E91EEC /* USTrImShrinker.h */,
-				1EC4BB7A0F87D8C400E91EEC /* USTrImShrinker.m */,
-			);
-			path = Tr.im;
-			sourceTree = "<group>";
-		};
 		1EC4BB6E0F87D80C00E91EEC /* Bit.ly */ = {
 			isa = PBXGroup;
 			children = (
+				9036718911494E53007A8AF1 /* USBitlyShrinker.h */,
+				9036718A11494E53007A8AF1 /* USBitlyShrinker.m */,
 			);
 			path = Bit.ly;
 			sourceTree = "<group>";
@@ -375,7 +416,6 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* URL Shrink_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				AA796F980F81550D00D9C477 /* tool_main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -396,17 +436,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				903C73091302E27E00ABDBE8 /* JSONKit */,
 				1E433FB10F833B60001FC357 /* iPhone */,
 				1E433DAA0F833B45001FC357 /* Mac */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8027E37B0FA0F1FE00AF3D97 /* Cli.gs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Cli.gs;
 			sourceTree = "<group>";
 		};
 		8027E3910FA0F24900AF3D97 /* Idek */ = {
@@ -418,6 +452,69 @@
 			path = Idek;
 			sourceTree = "<group>";
 		};
+		90143A851193615200EB865E /* kl.am */ = {
+			isa = PBXGroup;
+			children = (
+				90143A861193615200EB865E /* USklamShrinker.h */,
+				90143A871193615200EB865E /* USklamShrinker.m */,
+			);
+			path = kl.am;
+			sourceTree = "<group>";
+		};
+		90243EC71301D8830068689B /* ndurl */ = {
+			isa = PBXGroup;
+			children = (
+				90243EC81301D8830068689B /* USNdurlShrinker.h */,
+				90243EC91301D8830068689B /* USNdurlShrinker.m */,
+			);
+			path = ndurl;
+			sourceTree = "<group>";
+		};
+		90243EDC1301DAD00068689B /* qr.cx */ = {
+			isa = PBXGroup;
+			children = (
+				90243EDD1301DAD00068689B /* USqrcxShrinker.h */,
+				90243EDE1301DAD00068689B /* USqrcxShrinker.m */,
+			);
+			path = qr.cx;
+			sourceTree = "<group>";
+		};
+		903C73091302E27E00ABDBE8 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				90BE23F5130047760087278C /* JSONKit.h */,
+				90BE23F6130047760087278C /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		9048D78713043E1700DDC889 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				9048D78813043E1700DDC889 /* JSONKit.h */,
+				9048D78913043E1700DDC889 /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
+		9048D81D1304499200DDC889 /* tinyarro.ws */ = {
+			isa = PBXGroup;
+			children = (
+				9048D81E1304499200DDC889 /* UStinyarrowsShrinker.h */,
+				9048D81F1304499200DDC889 /* UStinyarrowsShrinker.m */,
+			);
+			path = tinyarro.ws;
+			sourceTree = "<group>";
+		};
+		907056FF119303DD00361529 /* Goo.gl */ = {
+			isa = PBXGroup;
+			children = (
+				907057011193040900361529 /* USGooglShrinker.h */,
+				907057001193040900361529 /* USGooglShrinker.m */,
+			);
+			path = Goo.gl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -425,15 +522,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9036718B11494E53007A8AF1 /* USBitlyShrinker.h in Headers */,
+				1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */,
+				1E433D4B0F8339DD001FC357 /* USTinyurlShrinker.h in Headers */,
+				1E433D470F8339DD001FC357 /* USIsGdShrinker.h in Headers */,
+				9051F7731149791300ADE40C /* USIdekShrinker.h in Headers */,
+				90143A881193615200EB865E /* USklamShrinker.h in Headers */,
+				1E433D490F8339DD001FC357 /* USLoopbackShrinker.h in Headers */,
+				907057031193040900361529 /* USGooglShrinker.h in Headers */,
 				1E433D400F8339DD001FC357 /* USURLShrinker.h in Headers */,
 				1E433D440F8339DD001FC357 /* USShrinkController.h in Headers */,
 				1E433D460F8339DD001FC357 /* USIncludes.h in Headers */,
-				1E433D470F8339DD001FC357 /* USIsGdShrinker.h in Headers */,
-				1E433D490F8339DD001FC357 /* USLoopbackShrinker.h in Headers */,
-				1E433D4B0F8339DD001FC357 /* USTinyurlShrinker.h in Headers */,
-				1EC4BA110F87373600E91EEC /* USDiggShrinker.h in Headers */,
-				1EC4BB7B0F87D8C400E91EEC /* USTrImShrinker.h in Headers */,
-				1E57DCF10FA3A1F70039E1F5 /* USURLRedirectShrinker.h in Headers */,
+				90243EE01301DAD00068689B /* USqrcxShrinker.h in Headers */,
+				90243EED1301DC0D0068689B /* USNdurlShrinker.h in Headers */,
+				9048D78A13043E1700DDC889 /* JSONKit.h in Headers */,
+				9048D8201304499200DDC889 /* UStinyarrowsShrinker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,7 +551,15 @@
 				1E433DA10F833B2B001FC357 /* USTinyurlShrinker.h in Headers */,
 				1E433DA20F833B2B001FC357 /* USShrinkController.h in Headers */,
 				1EC4BA130F87373600E91EEC /* USDiggShrinker.h in Headers */,
-				1EC4BB7D0F87D8C400E91EEC /* USTrImShrinker.h in Headers */,
+				9036718F11494E53007A8AF1 /* USBitlyShrinker.h in Headers */,
+				907057061193040900361529 /* USGooglShrinker.h in Headers */,
+				90143A8B1193615200EB865E /* USklamShrinker.h in Headers */,
+				90BE23F9130047760087278C /* JSONKit.h in Headers */,
+				90243EE21301DAD00068689B /* USqrcxShrinker.h in Headers */,
+				90243EEF1301DC1D0068689B /* USIdekShrinker.h in Headers */,
+				90243EF11301DC1E0068689B /* USNdurlShrinker.h in Headers */,
+				9048D78C13043E1700DDC889 /* JSONKit.h in Headers */,
+				9048D8221304499200DDC889 /* UStinyarrowsShrinker.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +613,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1E433D530F833A38001FC357 /* PBXTargetDependency */,
+				90BE244613004B170087278C /* PBXTargetDependency */,
 			);
 			name = Shrink;
 			productInstallPath = "$(HOME)/Applications";
@@ -533,7 +644,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "URL Shrink" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* URL Shrink */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -579,7 +697,14 @@
 				1E433D4A0F8339DD001FC357 /* USLoopbackShrinker.m in Sources */,
 				1E433D4C0F8339DD001FC357 /* USTinyurlShrinker.m in Sources */,
 				1EC4BA120F87373600E91EEC /* USDiggShrinker.m in Sources */,
-				1EC4BB7C0F87D8C400E91EEC /* USTrImShrinker.m in Sources */,
+				9036718C11494E53007A8AF1 /* USBitlyShrinker.m in Sources */,
+				9051F7741149791300ADE40C /* USIdekShrinker.m in Sources */,
+				907057021193040900361529 /* USGooglShrinker.m in Sources */,
+				90143A891193615200EB865E /* USklamShrinker.m in Sources */,
+				90243EE11301DAD00068689B /* USqrcxShrinker.m in Sources */,
+				90243EEE1301DC0E0068689B /* USNdurlShrinker.m in Sources */,
+				9048D7A113043EBC00DDC889 /* JSONKit.m in Sources */,
+				9048D8211304499200DDC889 /* UStinyarrowsShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,7 +718,15 @@
 				1E433DA70F833B39001FC357 /* USURLShrinker.m in Sources */,
 				1E433DA80F833B39001FC357 /* USShrinkController.m in Sources */,
 				1EC4BA140F87373600E91EEC /* USDiggShrinker.m in Sources */,
-				1EC4BB7E0F87D8C400E91EEC /* USTrImShrinker.m in Sources */,
+				9036719011494E53007A8AF1 /* USBitlyShrinker.m in Sources */,
+				907057051193040900361529 /* USGooglShrinker.m in Sources */,
+				90143A8C1193615200EB865E /* USklamShrinker.m in Sources */,
+				90BE23FA130047760087278C /* JSONKit.m in Sources */,
+				90243EE31301DAD00068689B /* USqrcxShrinker.m in Sources */,
+				90243EF01301DC1D0068689B /* USIdekShrinker.m in Sources */,
+				90243EF21301DC1F0068689B /* USNdurlShrinker.m in Sources */,
+				9048D78D13043E1700DDC889 /* JSONKit.m in Sources */,
+				9048D8231304499200DDC889 /* UStinyarrowsShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +738,6 @@
 				AA796A8C0F811D2900D9C477 /* USAppController.m in Sources */,
 				1E8D958C0F818BD600C77274 /* USSettingsController.m in Sources */,
 				1E8D987E0F81DEFA00C77274 /* MAAttachedWindow.m in Sources */,
-				8027E3950FA0F2B900AF3D97 /* USIdekShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,22 +745,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA796FA20F815B7700D9C477 /* USIsGdShrinker.m in Sources */,
-				AA796FA30F815B7700D9C477 /* USLoopbackShrinker.m in Sources */,
-				AA796FA40F815B7700D9C477 /* USShrinkController.m in Sources */,
-				AA796FA50F815B7700D9C477 /* USURLShrinker.m in Sources */,
-				AA796F990F81550D00D9C477 /* tool_main.m in Sources */,
-				1E8D94E30F81808200C77274 /* USTinyurlShrinker.m in Sources */,
+				9049F17C12FC66120065AC5C /* USLoopbackShrinker.m in Sources */,
+				9049F17D12FC66120065AC5C /* USIdekShrinker.m in Sources */,
+				9049F17E12FC66120065AC5C /* USklamShrinker.m in Sources */,
+				9049F17F12FC66120065AC5C /* USIsGdShrinker.m in Sources */,
+				9049F18012FC66120065AC5C /* USGooglShrinker.m in Sources */,
+				9049F18112FC66120065AC5C /* USTinyurlShrinker.m in Sources */,
+				9049F18212FC66120065AC5C /* USURLShrinker.m in Sources */,
+				9049F18312FC66120065AC5C /* USDiggShrinker.m in Sources */,
+				9049F18412FC66120065AC5C /* USShrinkController.m in Sources */,
+				9049F18512FC66120065AC5C /* USBitlyShrinker.m in Sources */,
+				9049F24712FC6B540065AC5C /* main.m in Sources */,
+				90243EE41301DAD00068689B /* USqrcxShrinker.m in Sources */,
+				90243EF31301DC280068689B /* USNdurlShrinker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E433D530F833A38001FC357 /* PBXTargetDependency */ = {
+		90BE244613004B170087278C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E433D3A0F8339CB001FC357 /* URLShrink.framework */;
-			targetProxy = 1E433D520F833A38001FC357 /* PBXContainerItemProxy */;
+			targetProxy = 90BE244513004B170087278C /* PBXContainerItemProxy */;
 		};
 		B05861200FA017BE00BB4A33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -684,18 +823,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "URLShrink-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -704,6 +851,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = URLShrink;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -711,17 +859,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
 				INFOPLIST_FILE = "URLShrink-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = (
 					"-framework",
 					Foundation,
@@ -730,6 +887,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = URLShrink;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -739,6 +897,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_LDFLAGS = (
@@ -756,6 +919,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -771,7 +939,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -787,6 +961,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = shrink;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -794,8 +969,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -809,6 +990,7 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = shrink;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -838,20 +1020,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shrink_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PRODUCT_NAME = Shrink;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -859,43 +1046,57 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
+				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "URL Shrink_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Shrink;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Classes/JSONKit\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Classes/JSONKit\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
