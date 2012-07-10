@@ -8,13 +8,13 @@
 
 #import "USIsGdShrinker.h"
 
-@interface USIsGdShrinker (Private) 
+@interface USIsGdShrinker (Private)
 -(NSURLRequest *)connection:(NSURLConnection *)connection
             willSendRequest:(NSURLRequest *)request
            redirectResponse:(NSURLResponse *)redirectResponse;
 @end
 
-@implementation USIsGdShrinker 
+@implementation USIsGdShrinker
 
 +(NSString *)name{
 	return @"is.gd";
@@ -23,7 +23,7 @@
 -(void)performShrinkOnURL:(NSURL *)url{
 	NSString *newURLString = [NSString stringWithFormat:@"http://is.gd/api.php?longurl=%@",[url absoluteString]];
 	NSURL *newURL = [NSURL URLWithString:newURLString];
-	
+
 	NSError *err = nil;
 	NSString *tinyURLString = [NSString stringWithContentsOfURL:newURL encoding:NSUTF8StringEncoding error:&err];
 	if(!tinyURLString || err){
@@ -32,7 +32,7 @@
 	}
 
 	NSURL *tinyURL = [NSURL URLWithString:tinyURLString];
-	[self doneShrinking:tinyURL];	
+	[self doneShrinking:tinyURL];
 }
 
 +(BOOL)canExpandURL:(NSURL *)url{
@@ -54,7 +54,7 @@
            redirectResponse:(NSURLResponse *)redirectResponse{
 	NSURL *url = [request URL];
 	if([url isEqual:sourceURL]) return request;
-	
+
 	[self doneExpanding:url];
 	[connection cancel];
 	[connection release];

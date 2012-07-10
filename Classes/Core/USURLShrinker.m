@@ -35,7 +35,7 @@
 -(void)dealloc{
 	[sourceURL release];
 	sourceURL = nil;
-	
+
 	[super dealloc];
 }
 
@@ -45,23 +45,23 @@
 	_target = target;
 	_action = action;
 	sourceURL = [url copy];
-	
+
 	[NSThread detachNewThreadSelector:@selector(_startShrink:) toTarget:self withObject:url];
 }
 
 -(void)_startShrink:(NSURL *)url{
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	
+
 	[self performShrinkOnURL:url];
-	
+
 	[pool release];
 }
 
 -(void)_startExpand:(NSURL *)url{
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	
+
 	[self performExpandOnURL:url];
-	
+
 	[pool release];
 }
 
@@ -84,8 +84,8 @@
 	_action = action;
 	sourceURL = [url copy];
 	NSLog(@"Source uRL: %@",sourceURL);
-	
-	[NSThread detachNewThreadSelector:@selector(_startExpand:) toTarget:self withObject:url];	
+
+	[NSThread detachNewThreadSelector:@selector(_startExpand:) toTarget:self withObject:url];
 }
 
 -(void)doneExpanding:(NSURL *)url{

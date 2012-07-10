@@ -10,7 +10,7 @@
 
 @interface USURLShrinker : NSObject {
 	NSURL *sourceURL;
-	
+
 	id _target;
 	SEL _action;
 }

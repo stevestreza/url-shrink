@@ -10,7 +10,7 @@
 #import "USURLShrinker.h"
 
 @interface USDiggShrinker : USURLShrinker {
-	
+
 }
 
 @end
